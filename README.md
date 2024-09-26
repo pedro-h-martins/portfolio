@@ -1,1 +1,1 @@
-# Repositório Contendo arquivos para meu portifolio
+# Repositório contendo arquivos para meu portifolio
