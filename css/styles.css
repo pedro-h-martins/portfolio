@@ -5,19 +5,30 @@
 
 
 body {
-    background-color:rgb(109, 107, 107);
+    background-color: #3C3D37
 }
 
 header {
-    background-color: rgb(40, 40, 40);
+    background-color: #697565;
 
 }
 
-header h1 {
+.titulo {
     display: flex;
     text-align: center;
     justify-content: center;
-    color: grey
+    color: #1E201E;
+}
+
+#introducao, #sobremim, #habilidades {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: 453a49
+}
+
+p {
+    color: #ECDFCC;
 }
 
 
@@ -61,7 +72,7 @@ main article p {
 
 
 .quadrado {
-    background-color: red;
+    background-color: #6d3b47;
     width: 854px;
     height: 480px;
 }
