@@ -5,11 +5,11 @@
 
 
 body {
-    background-color: #3C3D37
+    background-color: #0D0D0D;
 }
 
 header {
-    background-color: #697565;
+    background-color: #1F1F1F;
 
 }
 
@@ -17,18 +17,18 @@ header {
     display: flex;
     text-align: center;
     justify-content: center;
-    color: #1E201E;
+    color: #0A3D62;
 }
 
 #introducao, #sobremim, #habilidades {
     display: flex;
     text-align: center;
     justify-content: center;
-    color: 453a49
+    color: white;
 }
 
 p {
-    color: #ECDFCC;
+    color: #4A6FA5;
 }
 
 
@@ -73,6 +73,18 @@ main article p {
 
 .quadrado {
     background-color: #6d3b47;
-    width: 854px;
-    height: 480px;
+    width: 250px;
+    height: 200px;
+}
+
+.lista-horizontal {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-itens: center;
+    
+}
+
+.lista-horizontal li {
+    color: #4A6FA5;
 }
