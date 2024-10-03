@@ -20,7 +20,8 @@ header {
     color: #0A3D62;
 }
 
-#introducao, #sobremim, #habilidades {
+
+#introducao, #curriculo, #projetos {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -29,6 +30,7 @@ header {
 
 p {
     color: #4A6FA5;
+    white-space: pre-wrap;
 }
 
 
@@ -54,16 +56,30 @@ main article {
 main article h1 {
     font-family: Impact;
     text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #3f7092;
 }
 
+main article h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #719ebe;
+}
 
 main article p {
 
     text-align: justify;
 }
 
+article article p {
+    display: flex; 
+    justify-content: center;
+}
 
-.espacodoquadrado {
+.div-foto {
     display: grid;
     padding: 1%;
     justify-content: center;
@@ -71,8 +87,7 @@ main article p {
 }
 
 
-.quadrado {
-    background-color: #6d3b47;
+.foto {
     width: 250px;
     height: 200px;
 }
@@ -81,7 +96,7 @@ main article p {
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    align-itens: center;
+    align-items: center;
     
 }
 
