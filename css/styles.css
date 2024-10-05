@@ -1,87 +1,18 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
-.titulo {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #0A3D62;
-}
-
-
 #introducao, #curriculo, #projetos, #academicos, #certificados, #contato {
-    display: flex;
+    font-family: Impact;
     text-align: center;
-    justify-content: center;
     color: white;
+}
+
+.navbar {
+    font-family:monospace;
 }
 
 p {
-    color: #4A6FA5;
-    white-space: wrap;
+    color:grey
 }
 
-
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-}
-
-.menu a {
-    font-family: 'Courier New';
-    text-decoration: none;
-    color: white;
-}
-
-main article {
-    margin: 1%;
-    padding: 0 1%;
-}
-
-main article h1 {
-    font-family: Impact;
+h2 {
     text-align: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #3f7092;
+    color: #719ebe !important;
 }
-
-main article h2 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #719ebe;
-}
-
-main article p {
-
-    text-align: justify;
-}
-
-article article p {
-    display: flex; 
-    justify-content: center;
-}
-
-.div-foto {
-    display: grid;
-    padding: 1%;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.foto {
-    width: 250px;
-    height: 200px;
-}
-
-li {
-    text-align: center;
-}    

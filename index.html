@@ -6,27 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
 </head>
 
-<body style="background-color: #0D0D0D;">
-    <header style="background-color: #1F1F1F;">
-        <nav>
-            <ul class="menu">
-                <li><a href="#introducao">Introdução</a> </li>
-                <li><a href="#curriculo">Curriculo</a> </li>
-                <li><a href="#projetos">Principais Projetos</a> </li>
-                <li><a href="#academicos">Trabalhos Academicos</a> </li>
-                <li><a href="#certificados">Certificados</a> </li>
-                <li><a href="#contato">Contato</a> </li>
+<body class="bg-dark-subtle pt-5" data-bs-theme="dark">
+    <header class="bg-secondary-subtle">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary justify-content-around">
+            <ul class="navbar-nav d-flex gap-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="#introducao">Introdução</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#curriculo">Currículo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projetos">Principais Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#academicos">Trabalhos Acadêmicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#certificados">Certificados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1 class="titulo">Pedro Henrique Martins</h1>
-        </section>
-        <article>
-            <article>
+    <main class="m-3 px-3">
+        <article class="text-center">
+            <section>
+                <h1 class="text-center text-primary">Pedro Henrique Martins</h1>
+            </section>
+            <section>
                 <h1 id="introducao">Introdução:</h1>
                 <p>
                     Sou estudante do curso de Desenvolvimento de Software Multiplataforma, no qual tenho muito interrese
@@ -35,82 +48,88 @@
                     contenham
                     Aprendizado de Máquina e no Backend de sites.
                 </p>
-            </article>
+            </section>
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFqPnsNBSJIXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723502590446?e=1733356800&v=beta&t=U9oWA4dJ6gVnVe72q7dop-tUUDdYYUWZD0gpPdiMOS0
+            " class="rounded mx-auto d-block" style="width: 18rem;" alt="Foto do Pedro">
 
-            <div class="div-foto">
-                <img class="foto"
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQFqPnsNBSJIXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723502590446?e=1733356800&v=beta&t=U9oWA4dJ6gVnVe72q7dop-tUUDdYYUWZD0gpPdiMOS0">
-            </div>
-            </div>
-
-            <article>
+            <section>
                 <h1 id="curriculo">Currículo</h1>
 
-                <article>
-                    <h2>Formação academica:</h2>
+                <h2>Formação academica:</h2>
 
-                    <p>Cursando Desenvolvimento de Software Multiplataforma, na Fatec São José dos Campos
-                        (2024-202X)</p>
+                <p>Cursando Desenvolvimento de Software Multiplataforma, na Fatec São José dos Campos
+                    (2024-202X)</p>
 
-                    <h2>Certificação:</h2>
+                <h2>Certificação:</h2>
 
-                    <p>Certificação na AWS Academy Cloud Foundations </p>
+                <p>Certificação na AWS Academy Cloud Foundations </p>
 
-                    <h2>Competências Tecnicas:</h2>
+                <h2>Competências Tecnicas:</h2>
 
-                    <p>Linguagens: Python, HTML, CSS, SQL</p>
-                    <p>Frameworks: Flask</p>
-                    <p>Ferramentas: Git, Mysql</p>
-
-                </article>
-            </article>
-            <article>
+                <p>Linguagens: Python, HTML, CSS, SQL</p>
+                <p>Frameworks: Flask</p>
+                <p>Ferramentas: Git, Mysql</p>
+            </section>
+            <section>
                 <h1 id="projetos">Principais Projetos:</h1>
                 <h2>Descrição:</h2>
-                <article>
-                    <p>Desenvolvi um site para consultar informações sobre os atuais (2024) vereadores de São José dos
-                        Campos, utilizando uma base de dados publicos</p>
-                    <h2>Tecnologias Utilizadas:</h2>
-                    <p>Flask, HTML/CSS, Javascript</p>
-                    <h2>Desafio:</h2>
-                    <p>Filtrar as proposições dos vereadores</p>
-                    <h2>Solução:</h2>
-                    <p>---</p>
-                    <h2>Link para o codigo:</h2>
-                    <a style="display: flex; justify-content: center;"
-                        href="https://github.com/nicolygz/the-devs-department">Github Project</a>
-                    <h2>Video do projeto:</h2>
-                    <div style="text-align: center;">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/Mvr1f5ndZ1o?si=enoDSxx2AzWghrXW&amp;controls=0"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                        </iframe>
-                    </div>
-                </article>
-            </article>
-            <article>
+
+                <p>Desenvolvi um site para consultar informações sobre os atuais (2024) vereadores de São José dos
+                    Campos, utilizando uma base de dados publicos</p>
+                <h2>Tecnologias Utilizadas:</h2>
+                <p>Flask, HTML/CSS, Javascript</p>
+                <h2>Desafio:</h2>
+                <p>Filtrar as proposições dos vereadores</p>
+                <h2>Solução:</h2>
+                <p>---</p>
+                <h2>Link para o codigo:</h2>
+                <a style="display: flex; justify-content: center;"
+                    href="https://github.com/nicolygz/the-devs-department">Github Project</a>
+                <br>
+                <h2>Video do projeto:</h2>
+
+                <div style="text-align: center;">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/Mvr1f5ndZ1o?si=enoDSxx2AzWghrXW&amp;controls=0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section>
+
                 <h1 id="academicos">Trabalhos acadêmicos</h1>
                 <h2>---</h2>
-            </article>
-            <article>
+
+            </section>
+            <section>
                 <h1 id="certificados">Certificados:</h1>
                 <h2>AWS Academy Graduate - AWS Academy Cloud Foundations</h2>
                 <a style="display: flex; justify-content: center;"
                     href="https://www.credly.com/badges/2ebf0a4b-3a69-41c2-884b-9b024c63a6c1">Link para o
                     certificado</a>
-                <p></p>
-            </article>
-            <article>
+            </section>
+            <br>
+            <section>
                 <h1 id="contato">Contato:</h1>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/pedrohmartinsss">Linkedin</a></li>
-                    <li><a href="https://github.com/pedro-h-martins/">Github</a></li>
-                    <li style="color:#4A6FA5">pedrohenrimartinss@gmail.com Email</li>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-start"><a
+                            href="https://www.linkedin.com/in/pedrohmartinsss">Linkedin</a></li>
+                    <li class="list-group-item text-start"><a href="https://github.com/pedro-h-martins/">Github</a></li>
+                    <li class="list-group-item text-start d-flex justify-content-between align-items-center">
+                        <span>pedrohenrimartinss@gmail.com</span>
+                        <span style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))">Email</span>
+                    </li>
                 </ul>
-            </article>
+            </section>
+
+        </article>
     </main>
+    <footer class="text-center">
+        <h5>@Pedro Henrique Martins. Todos os direitos reservados.</h5>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>
