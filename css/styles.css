@@ -1,7 +1,7 @@
 #introducao, #curriculo, #projetos, #academicos, #certificados, #contato {
     font-family: Impact;
     text-align: center;
-    color: white;
+    color: #66c0f4;
 }
 
 .navbar {
@@ -9,10 +9,14 @@
 }
 
 p {
-    color:grey
+    color: #adadad;
 }
 
 h2 {
     text-align: center;
     color: #719ebe !important;
+}
+
+h5 {
+    color:white !important;
 }
