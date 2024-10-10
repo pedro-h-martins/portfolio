@@ -7,31 +7,52 @@
     <title>Portifólio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <script>
+        $(document).ready(function () {
+            $('.navbar-toggler').on('click', function () {
+                $('#navbarNav').toggleClass('navbar-expanded', $(this).attr('aria-expanded') === 'true');
+            });
+
+
+            $('#navbarNav').on('shown.bs.collapse', function () {
+                $(this).addClass('navbar-expanded');
+            }).on('hidden.bs.collapse', function () {
+                $(this).removeClass('navbar-expanded');
+            });
+        });
+    </script>
 </head>
 
 <body class="pt-5" data-bs-theme="dark" style="color: #171a21;">
     <header class="bg-secondary-subtle">
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary justify-content-around">
-            <ul class="navbar-nav d-flex gap-5">
-                <li class="nav-item">
-                    <a class="nav-link" href="#introducao">Introdução</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#curriculo">Currículo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projetos">Principais Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#academicos">Trabalhos Acadêmicos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#certificados">Certificados</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
-                </li>
-            </ul>
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introducao">Introdução</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#curriculo">Currículo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos">Principais Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#academicos">Trabalhos Acadêmicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificados">Certificados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="m-3 px-3">
