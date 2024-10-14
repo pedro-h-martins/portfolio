@@ -4,6 +4,10 @@
     color: #66c0f4;
 }
 
+.titulo {
+    padding-top: 1vh;
+}
+
 .navbar {
     font-family:monospace;
 }
@@ -19,4 +23,12 @@ h2 {
 
 h5 {
     color:white !important;
+}
+
+section {
+    padding-top: 25vh;
+}
+
+footer {
+    padding-top: 1vh;
 }
