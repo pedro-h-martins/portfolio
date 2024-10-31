@@ -13,7 +13,8 @@
 }
 
 p {
-    color: #adadad;
+    color: #F0E6E6;
+    font-size: 1.288rem;
 }
 
 h2 {
@@ -25,6 +26,9 @@ h5 {
     color:white !important;
 }
 
+a { 
+    font-size: 1rem;
+}
 section {
     padding-top: 25vh;
 }
