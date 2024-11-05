@@ -26,6 +26,9 @@ h5 {
     color:white !important;
 }
 
+a { 
+    font-size: 1rem;
+}
 section {
     padding-top: 25vh;
 }
