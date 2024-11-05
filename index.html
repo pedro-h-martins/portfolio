@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">  
+
     <script>
         $(document).ready(function () {
             $('.navbar-toggler').on('click', function () {
                 $('#navbarNav').toggleClass('navbar-expanded', $(this).attr('aria-expanded') === 'true');
             });
-
 
             $('#navbarNav').on('shown.bs.collapse', function () {
                 $(this).addClass('navbar-expanded');
@@ -32,12 +32,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex">
+                <ul class="navbar-nav   
+ d-flex">
                     <li class="nav-item">
                         <a class="nav-link" href="#introducao">Introdução</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#curriculo">Currículo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projetos">Principais Projetos</a>
@@ -45,61 +43,107 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#certificados">Certificados</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
-                    </li>
                 </ul>
             </div>
         </nav>
     </header>
     <main class="m-3 px-3">
-        <article class="text-center">
-            <section class="titulo">
-                <h1 class="text-center text-primary">Pedro Henrique Martins</h1>
-            </section>
-            <section class="titulo">
-                <h1 id="introducao">Introdução:</h1>
-                <p>
-                    Sou estudante do curso de Desenvolvimento de Software Multiplataforma, no qual tenho muito interrese
-                    em
-                    desenvolvimento de software. Busco aprimorar minhas habilidades para ingressar projetos que
-                    contenham
-                    Aprendizado de Máquina e Back-end de sites.
-                </p>
-            </section>
-            <img src="/imagens/pedro.jfif" class="rounded mx-auto d-block" style="width: 18rem;" alt="Foto do Pedro">
-
-            <section>
-                <h1 id="curriculo">Currículo:</h1>
-                <h2>Link para o currículo:</h2>
-                <a href="/documentos/curriculo-pedro.pdf">Currículo</a>
-            </section>
-            <section>
-                <h1 id="projetos">Principais Projetos:</h1>
-                <h2>Descrição:</h2>
-
-                <p>Desenvolvi um site para consultar informações do mandato de 2021-2024, dos vereadores de São José dos
-                    Campos,
-                    utilizando como base, dados publicos, principalmente disponiveis no site Câmara Sem Papel de SJC.
-                </p>
-                <h2>Tecnologias Utilizadas:</h2>
-                <p>Python (Flask), HTML/CSS, Javascript</p>
-                <h2>Desafio:</h2>
-                <p>Site atual da prefeitura tem dificil e confuso acesso para saber o que cada vereador realiza.</p>
-                <h2>Solução:</h2>
-                <p>Criar um site mais amigavel e intuitivo para o usuário leigo conseguir obter essas informações.</p>
-                <h2>Link para o codigo:</h2>
-                <a style="display: flex; justify-content: center;"
-                    href="https://github.com/pedro-h-martins/pedro-the-devs-department-api1">Projeto do Github</a>
-                <br>
-                <h2>Video do projeto:</h2>
-
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/o4FedTRK9qg?si=2A0sdE0VcthzVyyW&amp;controls=0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="card" style="height:36rem; border: 6px solid #272727;">
+            <div class="row g-0">
+                <div class="col-md-4 d-flex justify-content-center py-50">
+                    <img src="/imagens/pedro.jfif" class="img-fluid rounded-start" style="width: 18rem;" alt="...">
                 </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Pedro Henrique Martins</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-6 text-center">
+                                <p class="card-text">Estudante</p>
+                                <p class="card-text">Desenvolvimento de <br> Software Multiplataforma</p>
+                                <img src="/imagens/fateclogo.png" alt="FATEC Logo" class="tmn-logo"> 
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="text-center">
+                                    <p class="card-text">Áreas de interesse:</p>
+                                    <p class="card-text"> Aprendizado de Máquina e <br> Back-end de sites.</p>
+                                    <img src="/imagens/machine-learning.png" alt="Machine Learning" class="pe-3 tmn-logo"> 
+                                    <img src="/imagens/computer.png" alt="Back-end" class="pe-3 tmn-logo"> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mt-5">
+                            <div class="d-flex justify-content-center">
+                                <div class="bg-dark-overlay p-3" style="max-width: 90%; width: fit-content;">
+                                    <div class="d-flex gap-3">
+                                        <a href="https://br.linkedin.com/in/pedro-henrique-martins-55a0752a4"
+                                            class="btn text-white" target="_blank">
+                                            <div
+                                                class="d-flex flex-column px-50 align-items-center justify-content-end">
+                                                <img src="/imagens/linkedinlogo.png" alt="LinkedIn"
+                                                    class="img-fluid tmn-itens">
+                                                <span class="text-white pt-3">LinkedIn</span>
+                                            </div>
+                                        </a>
+                                        <a href="https://github.com/pedro-h-martins" class="btn text-white"
+                                            target="_blank">
+                                            <div
+                                                class="d-flex flex-column px-50 align-items-center justify-content-end">
+                                                <img src="/imagens/githublogo.png" alt="GitHub"
+                                                    class="img-fluid tmn-itens">
+                                                <span class="text-white pt-3">GitHub</span>
+                                            </div>
+                                        </a>
+                                        <a href="pedrohenrimartinss@gmail.com" class="btn text-white">
+                                            <div
+                                                class="d-flex flex-column px-50 align-items-center  justify-content-center">
+                                                <img src="/imagens/email.png" alt="Email" class="img-fluid tmn-itens">
+                                                <span class="text-white pt-3">Email</span>
+                                            </div>
+                                        </a>
+                                        <a href="/documentos/curriculo-pedro.pdf" class="btn text-white"
+                                            target="_blank">
+                                            <div
+                                                class="d-flex flex-column px-50 align-items-center justify-content-end">
+                                                <img src="/imagens/sheet.png" alt="Currículo"
+                                                    class="img-fluid tmn-itens">
+                                                <span class="text-white pt-auto">Currículo</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <article class="text-center">
+            <h1 id="projetos">Principais Projetos:</h1>
+            <h2>Descrição:</h2>
+
+            <p>Desenvolvi um site para consultar informações do mandato de 2021-2024, dos vereadores de São José dos
+                Campos,
+                utilizando como base, dados publicos, principalmente disponiveis no site Câmara Sem Papel de SJC.
+            </p>
+            <h2>Tecnologias Utilizadas:</h2>
+            <p>Python (Flask), HTML/CSS, Javascript</p>
+            <h2>Desafio:</h2>
+            <p>Site atual da prefeitura tem dificil e confuso acesso para saber o que cada vereador realiza.</p>
+            <h2>Solução:</h2>
+            <p>Criar um site mais amigavel e intuitivo para o usuário leigo conseguir obter essas informações.</p>
+            <h2>Link para o codigo:</h2>
+            <a style="display: flex; justify-content: center;"
+                href="https://github.com/pedro-h-martins/pedro-the-devs-department-api1">Projeto do Github</a>
+            <br>
+            <h2>Video do projeto:</h2>
+
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/o4FedTRK9qg?si=2A0sdE0VcthzVyyW&amp;controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             </section>
             <section>
             </section>
@@ -110,19 +154,6 @@
                     href="https://www.credly.com/badges/2ebf0a4b-3a69-41c2-884b-9b024c63a6c1">Link para o
                     certificado</a>
             </section>
-            <section>
-                <h1 id="contato">Contato:</h1>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-start"><a
-                            href="https://www.linkedin.com/in/pedrohmartinsss">Linkedin</a></li>
-                    <li class="list-group-item text-start"><a href="https://github.com/pedro-h-martins/">Github</a></li>
-                    <li class="list-group-item text-start d-flex justify-content-between align-items-center">
-                        <span>pedrohenrimartinss@gmail.com</span>
-                        <span style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))">Email</span>
-                    </li>
-                </ul>
-            </section>
-
         </article>
     </main>
     <footer class="text-center">

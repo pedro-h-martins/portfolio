@@ -1,4 +1,7 @@
-#introducao, #curriculo, #projetos, #academicos, #certificados, #contato {
+#introducao,
+#projetos,
+#academicos,
+#certificados {
     font-family: Impact;
     text-align: center;
     color: #66c0f4;
@@ -9,12 +12,24 @@
 }
 
 .navbar {
-    font-family:monospace;
+    font-family: monospace;
+}
+
+.bg-dark-overlay {
+    background-color: rgba(217, 217, 217, 0.04);
+    padding: 1.25rem;
+    border-radius: 16rem;
+    width: 75%;
+    max-width: 75%;
 }
 
 p {
     color: #F0E6E6;
     font-size: 1.3rem !important
+}
+
+h1 {
+    color: #0D6EFD !important;
 }
 
 h2 {
@@ -23,16 +38,31 @@ h2 {
 }
 
 h5 {
-    color:white !important;
+    color: white !important;
 }
 
-a { 
+a {
     font-size: 1rem;
 }
+
 section {
     padding-top: 25vh;
 }
 
 footer {
     padding-top: 1vh;
+}
+
+
+.py-50 {
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+}
+
+.tmn-logo {
+    height: 5.75rem;
+}
+
+.tmn-itens {
+    width: 3.441rem;
 }
