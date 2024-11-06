@@ -51,15 +51,14 @@ section {
     padding-bottom: 25vh;
 }
 
-
 .card-height-main {
-    margin: 1vh 1rem 30vh 1rem;
-    min-height: calc(100vh - 56px - 40vh);
+    margin: 1rem 1rem 30vh 1rem;
+    height: calc(102vh - 56px);
 }
 
 .card-height-projects {
     margin: 30vh 1rem 30vh 1rem;
-    min-height: calc(100vh - 56px - 60vh);
+    height: calc(100vh - 56px);
 }
 
 .py-vh-center {
@@ -75,10 +74,125 @@ section {
     background-color: rgba(217, 217, 217, 0.04);
     padding: 1.25rem;
     border-radius: 16rem;
-    width: 75%;
-    max-width: 75%;
+    width: 100%;
+    max-width: 100%;
 }
 
 footer {
     padding-top: 1vh;
+}
+
+@media (max-width: 1080px) {
+    p {
+        font-size: 1rem !important;
+    }
+
+    .tmn-logo {
+        height: 4rem;
+    }
+
+    .tmn-itens {
+        width: 2rem;
+    }
+
+    .card-height-main {
+        margin: 1vh 0.5rem 15vh 1vh;
+        max-height: none;
+        height: auto;
+    }
+
+    .bg-dark-overlay {
+        padding: 0.75rem;
+        border-radius: 8rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .py-vh-center {
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .bg-dark-overlay .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .bg-dark-overlay span {
+        font-size: 0.75rem;
+    }
+
+    .bg-dark-overlay .btn {
+        padding: 0.25rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem !important;
+    }
+}
+
+@media (min-width: 2160px) {
+    p {
+        font-size: 1.5rem !important;
+    }
+
+    .tmn-logo {
+        height: 7rem;
+    }
+
+    .tmn-itens {
+        width: 4.5rem;
+    }
+
+    .card-height-main {
+        max-width: 1800px;
+        margin: 2rem auto 35vh auto;
+    }
+
+    .card-height-projects {
+        max-width: 1800px;
+        margin: 35vh auto 35vh auto;
+    }
+
+    .bg-dark-overlay {
+        padding: 1.75rem;
+        border-radius: 20rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .titulo {
+        font-size: 3.5rem;
+    }
+
+    .navbar {
+        font-size: 1.25rem;
+    }
+
+    main {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
 }
