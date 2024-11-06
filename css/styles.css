@@ -1,6 +1,5 @@
 #introducao,
 #projetos,
-#academicos,
 #certificados {
     font-family: Impact;
     text-align: center;
@@ -28,7 +27,7 @@ p {
     font-size: 1.3rem !important
 }
 
-h1 {
+.titulo {
     color: #0D6EFD !important;
 }
 
@@ -47,6 +46,7 @@ a {
 
 section {
     padding-top: 25vh;
+    margin-bottom: 18rem;
 }
 
 footer {
