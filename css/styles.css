@@ -6,29 +6,18 @@
     color: #66c0f4;
 }
 
-.titulo {
-    padding-top: 1vh;
-}
-
 .navbar {
     font-family: monospace;
 }
 
-.bg-dark-overlay {
-    background-color: rgba(217, 217, 217, 0.04);
-    padding: 1.25rem;
-    border-radius: 16rem;
-    width: 75%;
-    max-width: 75%;
+.titulo {
+    padding-top: 1vh;
+    color: #0D6EFD !important;
 }
 
 p {
     color: #F0E6E6;
     font-size: 1.3rem !important
-}
-
-.titulo {
-    color: #0D6EFD !important;
 }
 
 h2 {
@@ -45,18 +34,8 @@ a {
 }
 
 section {
-    padding-top: 25vh;
-    margin-bottom: 18rem;
-}
-
-footer {
-    padding-top: 1vh;
-}
-
-
-.py-50 {
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+    padding-top: 30vh;
+    margin-bottom: 30vh;
 }
 
 .tmn-logo {
@@ -65,4 +44,41 @@ footer {
 
 .tmn-itens {
     width: 3.441rem;
+}
+
+.py-50 {
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+}
+
+
+.card-height-main {
+    margin: 1vh 1rem 30vh 1rem;
+    min-height: calc(100vh - 56px - 40vh);
+}
+
+.card-height-projects {
+    margin: 30vh 1rem 30vh 1rem;
+    min-height: calc(100vh - 56px - 60vh);
+}
+
+.py-vh-center {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+.mt-2-5 {
+    margin-top: 2.5rem !important;
+}
+
+.bg-dark-overlay {
+    background-color: rgba(217, 217, 217, 0.04);
+    padding: 1.25rem;
+    border-radius: 16rem;
+    width: 75%;
+    max-width: 75%;
+}
+
+footer {
+    padding-top: 1vh;
 }
