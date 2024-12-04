@@ -2,7 +2,6 @@
 #projetos,
 #certificados {
     font-family: Impact;
-    text-align: center;
     color: #66c0f4;
 }
 
@@ -11,33 +10,26 @@
 }
 
 .titulo {
-    padding-top: 1vh;
     color: #0D6EFD !important;
 }
 
 p {
     color: #F0E6E6;
-    font-size: 1.3rem !important
 }
 
 h2 {
-    text-align: center;
     color: #719ebe !important;
 }
 
-h5 {
-    color: white !important;
+.logo {
+    text-decoration: none !important;
+    color: #FEFEFE !important;
 }
 
 a {
-    font-size: 1rem;
+    text-decoration: underline !important;
+    color:#6EA8FE !important;
 }
-
-section {
-    padding-top: 30vh;
-    margin-bottom: 30vh;
-}
-
 .tmn-logo {
     height: 5.75rem;
 }
@@ -46,47 +38,7 @@ section {
     width: 3.441rem;
 }
 
-.py-50 {
-    padding-top: 25vh;
-    padding-bottom: 25vh;
-}
-
-.card-height-main {
-    margin: 1rem 1rem 30vh 1rem;
-    height: calc(102vh - 56px);
-}
-
-.card-height-projects {
-    margin: 30vh 1rem 30vh 1rem;
-    height: calc(100vh - 56px);
-}
-
-.py-vh-center {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-}
-
-.mt-2-5 {
-    margin-top: 2.5rem !important;
-}
-
-.bg-dark-overlay {
-    background-color: rgba(217, 217, 217, 0.04);
-    padding: 1.25rem;
-    border-radius: 16rem;
-    max-width: 90%; 
-    width: fit-content;
-}
-
-footer {
-    padding-top: 1vh;
-}
-
 @media (max-width: 1080px) {
-    p {
-        font-size: 1rem !important;
-    }
-
     .tmn-logo {
         height: 4rem;
     }
@@ -94,105 +46,14 @@ footer {
     .tmn-itens {
         width: 2rem;
     }
-
-    .card-height-main {
-        margin: 1vh 0.5rem 15vh 1vh;
-        max-height: none;
-        height: auto;
-    }
-
-    .bg-dark-overlay {
-        padding: 0.75rem;
-        border-radius: 8rem;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .py-vh-center {
-        padding-top: 2vh;
-        padding-bottom: 2vh;
-    }
-
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .bg-dark-overlay .d-flex {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .bg-dark-overlay span {
-        font-size: 0.75rem;
-    }
-
-    .bg-dark-overlay .btn {
-        padding: 0.25rem;
-    }
-
-    p {
-        margin-bottom: 0.5rem;
-    }
-
-    .mt-2 {
-        margin-top: 0.5rem !important;
-    }
 }
 
 @media (min-width: 2160px) {
-    p {
-        font-size: 1.5rem !important;
-    }
-
     .tmn-logo {
         height: 7rem;
     }
 
     .tmn-itens {
         width: 4.5rem;
-    }
-
-    .card-height-main {
-        max-width: 1800px;
-        margin: 2rem auto 35vh auto;
-    }
-
-    .card-height-projects {
-        max-width: 1800px;
-        margin: 35vh auto 35vh auto;
-    }
-
-    .bg-dark-overlay {
-        padding: 1.75rem;
-        border-radius: 20rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    .titulo {
-        font-size: 3.5rem;
-    }
-
-    .navbar {
-        font-size: 1.25rem;
-    }
-
-    main {
-        max-width: 1800px;
-        margin: 0 auto;
     }
 }
