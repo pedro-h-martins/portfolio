@@ -1,59 +1,59 @@
 #introducao,
 #projetos,
 #certificados {
-    font-family: Impact;
-    color: #66c0f4;
+  font-family: Impact;
+  color: #66c0f4;
 }
 
 .navbar {
-    font-family: monospace;
+  font-family: monospace;
 }
 
 .titulo {
-    color: #0D6EFD !important;
+  color: #0d6efd !important;
 }
 
 p {
-    color: #F0E6E6;
+  color: #f0e6e6;
 }
 
 h2 {
-    color: #719ebe !important;
+  color: #719ebe !important;
 }
 
 .logo {
-    text-decoration: none !important;
-    color: #FEFEFE !important;
+  text-decoration: none !important;
+  color: #fefefe !important;
 }
 
 a {
-    text-decoration: underline !important;
-    color:#6EA8FE !important;
+  text-decoration: underline !important;
+  color: #6ea8fe !important;
 }
 .tmn-logo {
-    height: 5.75rem;
+  height: 5.75rem;
 }
 
 .tmn-itens {
-    width: 3.441rem;
+  width: 3.441rem;
 }
 
 @media (max-width: 1080px) {
-    .tmn-logo {
-        height: 4rem;
-    }
+  .tmn-logo {
+    height: 4rem;
+  }
 
-    .tmn-itens {
-        width: 2rem;
-    }
+  .tmn-itens {
+    width: 2rem;
+  }
 }
 
 @media (min-width: 2160px) {
-    .tmn-logo {
-        height: 7rem;
-    }
+  .tmn-logo {
+    height: 7rem;
+  }
 
-    .tmn-itens {
-        width: 4.5rem;
-    }
+  .tmn-itens {
+    width: 4.5rem;
+  }
 }
