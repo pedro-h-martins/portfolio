@@ -5,6 +5,10 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
+const footerData = {
+    rights: "@Pedro Henrique Martins. Todos os direitos reservados."
+};
+
 const portfolioData = {
     name: "Pedro Henrique Martins",
     role: "Estudante",
@@ -14,7 +18,7 @@ const portfolioData = {
 };
 
 app.get('/', (req, res) => {
-    res.render('index', { data: portfolioData });
+    res.render('index', { data: portfolioData, footer: footerData });
 });
 
 const port = 3000;
