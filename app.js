@@ -5,6 +5,14 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
+const headerData = {
+    menuItems: [
+        { title: "Introdução", href: "#" },
+        { title: "Principais Projetos", href: "#projetos" },
+        { title: "Certificados", href: "#certificados" }
+    ]
+};
+
 const footerData = {
     rights: "@Pedro Henrique Martins. Todos os direitos reservados."
 };
@@ -18,7 +26,11 @@ const portfolioData = {
 };
 
 app.get('/', (req, res) => {
-    res.render('index', { data: portfolioData, footer: footerData });
+    res.render('index', {
+        header: headerData,
+        footer: footerData,  
+        data: portfolioData
+    });
 });
 
 const port = 3000;
