@@ -1,0 +1,28 @@
+{
+  "name": "pedro-h-martins-portifolio",
+  "version": "1.0.0",
+  "description": "Portifólio de Pedro Henrique Martins",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedro-h-martins/pedro-h-martins.github.io.git"
+  },
+  "keywords": [
+    "pedro-h-martins",
+    "portifolio"
+  ],
+  "author": "Pedro Henrique Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedro-h-martins/pedro-h-martins.github.io/issues"
+  },
+  "homepage": "https://github.com/pedro-h-martins/pedro-h-martins.github.io#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
