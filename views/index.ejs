@@ -39,24 +39,24 @@
             <%= data.name %>
           </h1>
           <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2 text-center mb-4 md:mb-0">
-              <p class="text-lg">
-                <%= data.role %>
+            <div class="md:w-1/2 text-center flex flex-col">
+              <p class="text-lg text-center flex-grow">
+                Desenvolvimento de Software Multiplataforma
               </p>
-              <p class="text-lg text-center">
-                Desenvolvimento de <br />
-                Software Multiplataforma
-              </p>
-              <img src="/images/fateclogo.png" alt="FATEC Logo" class="mx-auto w-24 h-24" />
+              <div class="flex justify-center h-24">
+                <img src="/images/fateclogo.png" alt="FATEC Logo" class="h-full w-auto" />
+              </div>
             </div>
             <div class="md:w-1/2 flex flex-col items-center">
-              <p class="text-lg">Áreas de interesse:</p>
-              <p class="text-lg text-center">
-                <%= data.interests %>
-              </p>
-              <div class="flex space-x-4">
-                <img src="/images/machine-learning.png" alt="Machine Learning" class="w-16 h-16" />
-                <img src="/images/computer.png" alt="Back-end" class="w-16 h-16" />
+              <div class="flex-grow">
+                <p class="text-lg flex justify-center">Áreas de interesse:</p>
+                <p class="text-lg text-center">
+                  <%= data.interests %>
+                </p>
+              </div>
+              <div class="flex space-x-12 px-8 h-24">
+                <img src="/images/machine-learning.png" alt="Machine Learning" class="h-full w-auto" />
+                <img src="/images/computer.png" alt="Back-end" class="h-full w-auto" />
               </div>
             </div>
           </div>
