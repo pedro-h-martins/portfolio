@@ -18,13 +18,13 @@ Antes de começar, certifique-se de ter os seguintes componentes:
 ### 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/pedro-h-martins/pedro-h-martins.github.io
+git clone https://github.com/pedro-h-martins/portfolio
 ```
 
 ### 2️⃣ Instale as dependências
 
 ```bash
-cd pedro-h-martins.github.io
+cd portfolio
 npm install
 ```
 

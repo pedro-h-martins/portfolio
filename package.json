@@ -1,5 +1,5 @@
 {
-  "name": "pedro-h-martins-portifolio",
+  "name": "pedro-h-martins-portfolio",
   "version": "1.0.0",
   "description": "Portifólio de Pedro Henrique Martins",
   "main": "app.js",
@@ -13,7 +13,7 @@
   },
   "keywords": [
     "pedro-h-martins",
-    "portifolio"
+    "portfolio"
   ],
   "author": "Pedro Henrique Martins",
   "license": "ISC",
