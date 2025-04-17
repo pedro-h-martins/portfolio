@@ -26,6 +26,16 @@ const portfolioData = {
     description: "Sou estudante do curso de Desenvolvimento de Software Multiplataforma, no qual tenho muito interrese em desenvolvimento de software. Busco aprimorar minhas habilidades para ingressar projetos que contenham Aprendizado de Máquina e Back-end de sites."
 };
 
+const resumeData = {
+    phone: "(12) 98829-5823",
+    address: "Rua Josué de Oliveira, 213. Residencial União - São José dos Campos",
+    lang: "Python, Type/Javascript,",
+    lang2: "SQL",
+    fWorks: "Flask, ExpressJS",
+    tools: "Git e MySQL",
+    cert: "AWS Academy Cloud Foundations"
+};
+
 app.get('/', (req, res) => {
     res.render('index', {
         header: headerData,
@@ -38,7 +48,8 @@ app.get('/curriculo', (req, res) => {
     res.render('curriculo', {
         header: headerData,
         footer: footerData,
-        data: portfolioData
+        data: portfolioData,
+        resume: resumeData
     });
 });
 

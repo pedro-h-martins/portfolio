@@ -32,7 +32,7 @@
     <main class="max-w-7xl mx-auto mb-24 px-4">
         <article class="container mx-auto">
             <header class="flex justify-between items-center gap-8 mb-8">
-                <h1 class="text-3xl font-bold text-gray-100">Pedro Henrique Martins</h1>
+                <h1 class="text-3xl font-bold text-gray-100"><%= data.name %></h1>
                 <img src="/images/pedro.jpg" class="rounded-lg w-32 h-32 object-cover" alt="Pedro Henrique">
             </header>
 
@@ -63,22 +63,21 @@
                                     <dt class="sr-only">Email:</dt>
                                     <dd class="flex items-center">
                                         <i class="fas fa-envelope text-blue-400 text-xl" aria-hidden="true"></i>
-                                        <span class="ml-2">pedrohenrimartins@gmail.com</span>
+                                        <span class="ml-2"><%= data.email %></span>
                                     </dd>
                                 </div>
                                 <div class="flex items-center space-x-4 mt-4">
                                     <dt class="sr-only">Telefone:</dt>
                                     <dd class="flex items-center">
                                         <i class="fas fa-phone text-blue-400 text-xl" aria-hidden="true"></i>
-                                        <span class="ml-2">(12) 98829-5823</span>
+                                        <span class="ml-2"><%= resume.phone %></span>
                                     </dd>
                                 </div>
                                 <div class="flex items-center space-x-4 mt-4">
                                     <dt class="sr-only">Endereço:</dt>
                                     <dd class="flex items-center">
                                         <i class="fas fa-map-marker-alt text-blue-400 text-xl" aria-hidden="true"></i>
-                                        <span class="ml-2">Rua Josué de Oliveira, 213. Residencial União - São José dos
-                                            Campos</span>
+                                        <span class="ml-2"><%= resume.address %></span>
                                     </dd>
                                 </div>
                             </dl>
@@ -148,10 +147,10 @@
                             HABILIDADES (Hard
                             Skills)</h2>
                         <ul class="list-disc list-inside mt-4 space-y-2">
-                            <li>Linguagens: Python, Type/Javascript</li>
-                            <li class="list-none ml-6">SQL</li>
-                            <li>Frameworks: Flask, ExpressJS</li>
-                            <li>Ferramentas: Git e MySQL</li>
+                            <li>Linguagens: <%= resume.lang %></li>
+                            <li class="list-none ml-6"><%= resume.lang2 %></li>
+                            <li>Frameworks: <%= resume.fWorks %></li>
+                            <li>Ferramentas: <%= resume.tools %></li>
                         </ul>
                     </div>
 
@@ -159,7 +158,7 @@
                         <div class="w-full md:w-1/2">
                             <h2 class="text-2xl font-semibold text-blue-400 pb-1">CERTIFICAÇÕES
                             </h2>
-                            <p class="mt-4">AWS Academy Cloud Foundations</p>
+                            <p class="mt-4"><%= resume.cert %></p>
                         </div>
                     </div>
                 </div>
