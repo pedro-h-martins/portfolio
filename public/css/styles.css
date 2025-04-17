@@ -38,6 +38,11 @@ a {
   width: 3.441rem;
 }
 
+.bg-blue-500 {
+  text-decoration: none !important;
+  color: white !important;
+}
+
 @media (max-width: 1080px) {
   .tmn-logo {
     height: 4rem;

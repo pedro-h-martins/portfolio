@@ -7,9 +7,10 @@ app.use(express.static('public'));
 
 const headerData = {
     menuItems: [
-        { title: "Introdução", href: "#" },
-        { title: "Principais Projetos", href: "#projetos" },
-        { title: "Certificados", href: "#certificados" }
+        { title: "Introdução", href: "/#" },
+        { title: "Principais Projetos", href: "/#projetos" },
+        { title: "Certificados", href: "/#certificados" },
+        { title: "Curriculo", href: "/curriculo" }
     ]
 };
 
@@ -28,7 +29,15 @@ const portfolioData = {
 app.get('/', (req, res) => {
     res.render('index', {
         header: headerData,
-        footer: footerData,  
+        footer: footerData,
+        data: portfolioData
+    });
+});
+
+app.get('/curriculo', (req, res) => {
+    res.render('curriculo', {
+        header: headerData,
+        footer: footerData,
         data: portfolioData
     });
 });
