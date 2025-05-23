@@ -1,0 +1,45 @@
+CREATE TABLE `resumeData` (
+	`res_id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`port_id` INTEGER NOT NULL UNIQUE,
+	`skills_id` INTEGER NOT NULL UNIQUE,
+	`telefone` VARCHAR(20) NOT NULL UNIQUE,
+	`endereco` VARCHAR(255) NOT NULL,
+	`cert` TINYTEXT NOT NULL,
+	PRIMARY KEY(`res_id`)
+);
+
+
+CREATE TABLE `headerData` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`href` VARCHAR(128) NOT NULL UNIQUE,
+	`titulo` VARCHAR(128) NOT NULL UNIQUE,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `userData` (
+	`port_id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`nome` VARCHAR(255) NOT NULL,
+	`papel` VARCHAR(32),
+	`email` VARCHAR(64) NOT NULL UNIQUE,
+	`interesses` VARCHAR(255) NOT NULL,
+	`info` TEXT NOT NULL,
+	PRIMARY KEY(`port_id`)
+);
+
+
+CREATE TABLE `skillsData` (
+	`skills_id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`lang` VARCHAR(128) NOT NULL,
+	`lang2` VARCHAR(128) NOT NULL,
+	`fworks` VARCHAR(128) NOT NULL,
+	`tools` VARCHAR(128),
+	PRIMARY KEY(`skills_id`)
+);
+
+
+ALTER TABLE `userData`
+ADD FOREIGN KEY(`port_id`) REFERENCES `resumeData`(`port_id`);
+
+ALTER TABLE `skillsData`
+ADD FOREIGN KEY(`skills_id`) REFERENCES `resumeData`(`skills_id`);

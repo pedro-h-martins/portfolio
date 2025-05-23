@@ -1,7 +1,11 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
-import mysql from 'mysql2/promise';
 import { headerData, footerData, userData, resumeData } from './data.js';
+import bodyParser from 'body-parser';
+import userRoutes from './routes/userRoutes.js';
+import resumeRoutes from './routes/resumeRoutes.js';
+import headerRoutes from './routes/headerRoutes.js';
+import skillsRoutes from './routes/skillsRoutes.js';
 
 dotenv.config();
 
@@ -11,12 +15,12 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-const connection = await mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-});
+app.use(bodyParser.json());
+
+app.use('/api', userRoutes);
+app.use('/api', resumeRoutes);
+app.use('/api', headerRoutes);
+app.use('/api', skillsRoutes);
 
 app.get('/', (req, res) => {
     res.render('index', {
