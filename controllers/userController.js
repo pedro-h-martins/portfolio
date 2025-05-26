@@ -2,10 +2,10 @@ import db from '../config/db.js';
 
 export const createUser = async (req, res) => {
     try {
-        const { nome, papel, email, interesses, desc } = req.body;
+        const { nome, papel, email, interesses, info } = req.body;
         const [result] = await db.promise().query(
             'INSERT INTO userData (nome, papel, email, interesses, info) VALUES (?, ?, ?, ?, ?)',
-            [nome, papel, email, interesses, desc]
+            [nome, papel, email, interesses, info]
         );
         res.status(201).send({ id: result.insertId, ...req.body });
     } catch (err) {
@@ -42,10 +42,10 @@ export const getAllUsers = async (req, res) => {
 export const updateUser = async (req, res) => {
     try {
         const { id } = req.params;
-        const { nome, papel, email, interesses, desc } = req.body;
+        const { nome, papel, email, interesses, info } = req.body;
         const [result] = await db.promise().query(
             'UPDATE userData SET nome = ?, papel = ?, email = ?, interesses = ?, info = ? WHERE port_id = ?',
-            [nome, papel, email, interesses, desc, id]
+            [nome, papel, email, interesses, info, id]
         );
         if (result.affectedRows === 0) {
             res.status(404).send({ message: 'User não encontrado' });
