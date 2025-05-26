@@ -1,32 +1,52 @@
 import db from '../config/db.js';
 import { headerData, userData, resumeData } from '../data.js';
 
-headerData.menuItems.forEach(item => {
-    const query = 'INSERT INTO headerData (href, titulo) VALUES (?, ?)';
-    db.query(query, [item.href, item.title], (err) => {
-        if (err) console.error('Error seeding headerData:', err);
+const executeQuery = (query, params) => {
+    return new Promise((resolve, reject) => {
+        db.query(query, params, (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        });
     });
-});
+};
 
-//ID Padrão de inicialização
-const portId = 1;
-const skillsId = 1;
+async function seedDatabase() {
+    try {
+        console.log('Inserindo dados do header...');
+        const headerPromises = headerData.menuItems.map(item => {
+            return executeQuery(
+                'INSERT INTO headerData (href, titulo) VALUES (?, ?)',
+                [item.href, item.title]
+            );
+        });
+        await Promise.all(headerPromises);
 
-const resumeQuery = 'INSERT INTO resumeData (port_id, skills_id, telefone, endereco, cert) VALUES (?, ?, ?, ?, ?)';
-db.query(resumeQuery, [portId, skillsId, resumeData.phone, resumeData.address, resumeData.cert], (err) => {
-    if (err) {
-        console.error('Error seeding resumeData:', err);
+        console.log('Inserindo dados do usuário...');
+        const userResult = await executeQuery(
+            'INSERT INTO userData (nome, papel, email, interesses, `info`) VALUES (?, ?, ?, ?, ?)',
+            [userData.name, userData.role, userData.email, userData.interests, userData.description]
+        );
+        const portId = userResult.insertId;
+
+        console.log('Inserindo dados de habilidades...');
+        const skillsResult = await executeQuery(
+            'INSERT INTO skillsData (lang, lang2, fworks, tools) VALUES (?, ?, ?, ?)',
+            [resumeData.lang, resumeData.lang2, resumeData.fWorks, resumeData.tools]
+        );
+        const skillsId = skillsResult.insertId;
+
+        console.log('Inserindo dados do currículo...');
+        await executeQuery(
+            'INSERT INTO resumeData (port_id, skills_id, telefone, endereco, cert) VALUES (?, ?, ?, ?, ?)',
+            [portId, skillsId, resumeData.phone, resumeData.address, resumeData.cert]
+        );
+
+        console.log('Database seeding completado com sucesso!');
+    } catch (error) {
+        console.error('Erro durante o seeding:', error);
+    } finally {
         db.end();
-        return;
     }
-    const userQuery = 'INSERT INTO userData (port_id, nome, papel, email, interesses, `info`) VALUES (?, ?, ?, ?, ?, ?)';
-    db.query(userQuery, [portId, userData.name, userData.role, userData.email, userData.interests, userData.description], (err) => {
-        if (err) console.error('Error seeding userData:', err);
-    });
-    const skillsQuery = 'INSERT INTO skillsData (skills_id, lang, lang2, fworks, tools) VALUES (?, ?, ?, ?, ?)';
-    db.query(skillsQuery, [skillsId, resumeData.lang, resumeData.lang2, resumeData.fWorks, resumeData.tools], (err) => {
-        if (err) console.error('Error seeding skillsData:', err);
-    });
-    console.log('Database seeding completed.');
-    db.end();
-});
+}
+
+seedDatabase();
