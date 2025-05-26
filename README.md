@@ -14,7 +14,6 @@ Antes de começar, certifique-se de ter os seguintes componentes:
 ---
 
 ## 🛠️ Passo a passo para rodar o projeto localmente
-
 ### 1️⃣ Clone o repositório
 
 ```bash
@@ -28,7 +27,16 @@ cd portfolio
 npm install
 ```
 
-### 3️⃣ Rode o projeto
+### 3️⃣ Configure o arquivo .env
+
+```bash
+B_HOST=' ' --> endereço do host
+DB_USER=' ' --> nome do usuário
+DB_PASSWORD=' ' --> senha do usuário
+DB_NAME=' ' --> nome do banco
+```
+
+### 4️⃣ Rode o projeto
 
 ```bash
 npm run start
