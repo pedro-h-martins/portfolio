@@ -36,7 +36,7 @@
         </div>
         <div class="md:w-2/3 p-4">
           <h1 class="text-center text-4xl font-bold mb-4 titulo">
-            <%= data.name %>
+            <%= data.nome %>
           </h1>
           <div class="flex flex-col md:flex-row">
             <div class="md:w-1/2 text-center flex flex-col">
@@ -51,7 +51,7 @@
               <div class="flex-grow">
                 <p class="text-lg flex justify-center">Áreas de interesse:</p>
                 <p class="text-lg text-center">
-                  <%= data.interests %>
+                  <%= data.interesses %>
                 </p>
               </div>
               <div class="flex space-x-12 px-8 h-24">
@@ -77,9 +77,8 @@
                       <span class="pt-2">GitHub</span>
                     </div>
                   </a>
-                  <div class="flex flex-col items-center logo">
-                    <img src="/images/email.png" alt="Email" class="w-12 h-12" />
-                    <span class="pt-2">
+                  <div class="flex flex-col items-center logo"> <img src="/images/email.png" alt="Email"
+                      class="w-12 h-12" /> <span class="pt-2">
                       <%= data.email %>
                     </span>
                   </div>
@@ -94,7 +93,7 @@
             </div>
           </div>
           <p class="mt-4 text-center">
-            <%= data.description %>
+            <%= data.info %>
           </p>
         </div>
       </div>

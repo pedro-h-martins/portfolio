@@ -8,14 +8,34 @@
         <span class="block w-6 h-0.5 bg-black"></span>
       </button>
       <div class="hidden lg:flex justify-center w-full py-4" id="mobileMenu">
-        <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-8">
+        <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-8" id="menuItems">
           <% header.menuItems.forEach(function(item) { %>
             <li>
-              <a class="text-white hover:text-secondary block text-center logo" href="<%= item.href %>"><%= item.title %></a>
+              <a class="text-white hover:text-secondary block text-center logo" href="<%= item.href %>">
+                <%= item.title %>
+              </a>
             </li>
-          <% }); %>
+            <% }); %>
         </ul>
       </div>
+      <script>
+        async function updateMenuItems() {
+          try {
+            const headers = await getHeaders();
+            const menuList = document.getElementById('menuItems');
+            if (headers && headers.length > 0) {
+              menuList.innerHTML = headers.map(item => `
+                <li>
+                  <a class="text-white hover:text-secondary block text-center logo" href="${item.href}">${item.titulo}</a>
+                </li>
+              `).join('');
+            }
+          } catch (error) {
+            console.error('Error updating menu items:', error);
+          }
+        }
+        document.addEventListener('DOMContentLoaded', updateMenuItems);
+      </script>
     </div>
   </div>
 </nav>
