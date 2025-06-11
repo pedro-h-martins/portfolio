@@ -1,6 +1,6 @@
 # 📝 Portfólio - Pedro Henrique Martins
 
-Bem-vindo ao meu portfólio! Este projeto foi desenvolvido utilizando **Node.js** e **Express** para demonstrar minhas habilidades e projetos.
+Bem-vindo ao meu portfólio! Este projeto foi desenvolvido utilizando **Node.js** e **Express**. Inclui uma API REST com CRUD completo ligado ao banco de dados **MySQL** para gerenciamento dos dados do portfólio. Foi realizado para demonstrar minhas habilidades e projetos realizados.
 
 ---
 
@@ -10,6 +10,7 @@ Antes de começar, certifique-se de ter os seguintes componentes:
 
 - [📦 Node.js](https://nodejs.org/en) (versão recomendada: 18+)
 - [🔧 Git](https://git-scm.com/)
+- [🐬 MySQL](https://dev.mysql.com/downloads/mysql/) (a versão deve ser 8+)
 
 ---
 
@@ -27,18 +28,28 @@ cd portfolio
 npm install
 ```
 
-### 3️⃣ Configure o arquivo .env
+### 3️⃣ Configure o banco de dados
+
+1. Crie um banco de dados MySQL
+
+2. Importe o esquema do banco usando o arquivo `database/portfolioDB.sql`
+
+### 4️⃣ Configure o arquivo .env
 
 ```bash
-B_HOST=' ' --> endereço do host
-DB_USER=' ' --> nome do usuário
-DB_PASSWORD=' ' --> senha do usuário
-DB_NAME=' ' --> nome do banco
+DB_HOST='localhost' --> endereço do host
+DB_USER='seu_usuario' --> nome do usuário
+DB_PASSWORD='sua_senha' --> senha do usuário
+DB_NAME='seu_banco' --> nome do banco
 ```
 
-### 4️⃣ Rode o projeto
+### 5️⃣ Rode o projeto
 
 ```bash
+# Popula o banco com dados iniciais (Opcional)
+npm run seed
+
+# Inicia o servidor
 npm run start
 ```
 
@@ -47,16 +58,23 @@ npm run start
 ## 🗂️ Estrutura do repositório
 
 ```plaintext
-│── public/             # Arquivos estáticos
-│   ├── css/            
-│   ├── documents/
-│   ├── images/              
-├── views/              # Repositório contendo arquivos .ejs
-│   ├── partials/       # Código reutilizável
-│   │   ├── footer.ejs
-│   │   ├── header.ejs    
+├── config/             # Configurações do projeto
+│   ├── db.js           # Configuração do banco de dados
+├── controllers/        # Controladores da aplicação
+├── database/           # Arquivos relacionados ao banco de dados
+│   ├── portfolioDB.sql # Esquema do banco de dados
+│   ├── seed.js         # Script para popular o banco
+├── public/             # Arquivos estáticos
+│   ├── css/            # Folhas de estilo
+│   ├── documents/      # Arquivos de documentos
+│   ├── images/         # Imagens do projeto
+├── routes/             # Rotas da aplicação
+├── views/              # Templates EJS
+│   ├── curriculo.ejs   # Página do currículo
 │   ├── index.ejs       # Página principal
-│   ├── curriculo.ejs   # Página contendo currículo
+│   ├── partials/       # Componentes reutilizáveis
 ├── app.js              # Arquivo principal da aplicação
-│── package.json        # Configurações e dependências do projeto
+├── data.js             # Dados para o banco de dados
+├── package.json        # Configurações e dependências do projeto
+├── vercel.json         # Configuração para deploy
 ```
