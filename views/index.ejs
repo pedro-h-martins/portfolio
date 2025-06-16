@@ -93,146 +93,30 @@
         </div>
       </div>
     </div>
+    
     <div class="flex justify-center items-center mb-12">
       <h1 id="principais-projetos" class="text-4xl font-bold text-center">
         Principais Projetos
       </h1>
     </div>
+    
+    <%- include('./partials/projects.ejs'); %>
 
-    <article class="text-center mb-32">
-      <div class="bg-transparent rounded-lg overflow-hidden">
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-1/2 p-4">
-            <h1 id="projetos" class="text-4xl font-bold mb-4 text-center">
-              Site Vereadores SJC
-            </h1>
-            <iframe width="100%" height="300"
-              src="https://www.youtube.com/embed/o4FedTRK9qg?si=2A0sdE0VcthzVyyW&amp;controls=0"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="mt-4">
-              <a href="https://github.com/pedro-h-martins/pedro-the-devs-department-api1" class="text-blue-500">Projeto
-                no Github</a>
-            </div>
-            <div class="mt-4">
-              <h2 class="text-2xl font-bold">Desafio:</h2>
-              <p>
-                Site atual da prefeitura tem difícil e confuso acesso para
-                saber o que cada vereador realiza.
-              </p>
-            </div>
-            <div class="mt-4">
-              <h2 class="text-2xl font-bold">Solução:</h2>
-              <p>
-                Criar um site mais amigável e intuitivo para o usuário leigo
-                conseguir obter essas informações.
-              </p>
-            </div>
-          </div>
-          <div class="md:w-1/2 p-4 pt-20">
-            <p class="text-center">
-              Desenvolvi um site para consultar informações do mandato de
-              2021-2024, dos vereadores de São José dos Campos, utilizando
-              como base, dados públicos, principalmente disponíveis no site
-              Câmara Sem Papel de SJC. Eu fui responsável pelo back-end dos
-              filtros, realizei alterações na página vereador e fiz
-              <em>merges</em> das repos na branch principal.
-            </p>
-            <h2 class="text-2xl font-bold mt-4">Tecnologias Utilizadas:</h2>
-            <div class="flex flex-col items-center gap-4 mt-4">
-              <div class="flex gap-4 mb-4">
-                <img src="/images/html5logo.png" alt="HTML5" class="h-20 w-auto" />
-                <img src="/images/css3logo.png" alt="CSS3" class="h-20 w-auto" />
-                <img src="/images/jslogo.png" alt="JavaScript" class="h-20 w-auto" />
-                <div class="text-center">
-                  <img src="/images/pythonlogo.png" alt="Python" class="h-20 w-auto" />
-                  <p class="mt-2">Python</p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <img src="/images/mysql-logo.png" alt="MySQL" class="h-20 w-auto" />
-                <img src="/images/flasklogo.png" alt="Flask" class="h-20 w-auto" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-
-    <article class="text-center mb-32">
-      <div class="bg-transparent rounded-lg overflow-hidden">
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-1/2 p-4">
-            <h1 id="projetos-helpnei" class="text-4xl font-bold mb-4 text-center">
-              Projeto Helpnei
-            </h1>
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/bwsLHyKiF4Y"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="mt-4">
-              <a href="https://github.com/the-devs-department/helpnei" class="text-blue-500">Projeto no Github</a>
-            </div>
-            <div class="mt-4">
-              <h2 class="text-2xl font-bold">Desafio:</h2>
-              <p>
-                Os patrocinadores querem ver seus dados e a evolução deles de forma mais efetiva e facil
-              </p>
-            </div>
-            <div class="mt-4">
-              <h2 class="text-2xl font-bold">Solução:</h2>
-              <p>
-                Criar um site para o aplicativo da Helpnei, que mostre informações no dashboard e permita convites de
-                patrocínio
-                de usuários em base o perfil dos mesmos.
-              </p>
-            </div>
-          </div>
-          <div class="md:w-1/2 p-4 pt-20">
-            <p class="text-center">
-              Desenvolvi um site para que permite visualizar dashboard de cada empresa, realizar cadastro de usuários e
-              pedir patrocínio de
-              empresas interessadas
-              no perfil do usuário cadastrado. Eu tive como responsabilidades, integrar o Back com o Front, criar a API
-              com CRUD
-              dos dados do banco do site, criar o manual do usuário e realizar operações no git para juntar os commits.
-            </p>
-            <h2 class="text-2xl font-bold mt-4">Tecnologias Utilizadas:</h2>
-            <div class="flex flex-col items-center gap-4 mt-4">
-              <div class="flex gap-4 mb-4">
-                <img src="/images/html5logo.png" alt="HTML5" class="h-20 w-auto" />
-                <img src="/images/css3logo.png" alt="CSS3" class="h-20 w-auto" />
-                <img src="/images/tslogo.png" alt="Typescript" class="h-20 w-auto" title="Typescript" />
-              </div>
-              <div class="flex gap-4">
-                <img src="/images/nodejslogo.png" alt="NodeJS" class="h-20 w-auto" title="NodeJS" />
-                <img src="/images/expressjslogo.png" alt="ExpressJS" class="h-20 w-auto" title="ExpressJS" />
-                <img src="/images/reactlogo.png" alt="ReactJS" class="h-20 w-auto" title="ReactJS" />
-                <img src="/images/mysql-logo.png" alt="MySQL" class="h-20 w-auto" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <section class="text-center mb-32">
-      <h1 id="certificados" class="text-3xl font-bold mb-4">Certificados:</h1>
-      <h2 class="text-2xl font-bold">
-        AWS Academy Graduate - AWS Academy Cloud Foundations
-      </h2>
-      <a href="https://www.credly.com/badges/2ebf0a4b-3a69-41c2-884b-9b024c63a6c1" class="text-blue-500">Link para o
-        certificado</a>
-      <br />
-      <h2 class="text-2xl font-bold mt-4">
-        19ª Edição da ESCOLA DE INOVADORES (2024-2)
-      </h2>
-      <a href="documents\CERTIFICADO_-_2024-2.pdf" class="text-blue-500">Link para o certificado</a>
-      <h2 class="text-2xl font-bold mt-4">Imersão Dev Back-End 2024-12</h2>
-      <a href="documents\CertificadoImersaodev.png" class="text-blue-500">Link para o certificado</a>
-    </section>
+      <section class="text-center mb-32">
+        <h1 id="certificados" class="text-3xl font-bold mb-4">Certificados:</h1>
+        <h2 class="text-2xl font-bold">
+          AWS Academy Graduate - AWS Academy Cloud Foundations
+        </h2>
+        <a href="https://www.credly.com/badges/2ebf0a4b-3a69-41c2-884b-9b024c63a6c1" class="text-blue-500">Link para o
+          certificado</a>
+        <br />
+        <h2 class="text-2xl font-bold mt-4">
+          19ª Edição da ESCOLA DE INOVADORES (2024-2)
+        </h2>
+        <a href="documents\CERTIFICADO_-_2024-2.pdf" class="text-blue-500">Link para o certificado</a>
+        <h2 class="text-2xl font-bold mt-4">Imersão Dev Back-End 2024-12</h2>
+        <a href="documents\CertificadoImersaodev.png" class="text-blue-500">Link para o certificado</a>
+      </section>
   </main>
 
   <footer class="text-center pb-8">
