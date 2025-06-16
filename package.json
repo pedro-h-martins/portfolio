@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./public/css/tailwind/input.css -o ./public/css/tailwind/output.css",
+    "dev": "npm run build && node app.js",
     "seed": "node database/seed.js",
     "start": "node app.js"
   },
@@ -31,6 +33,7 @@
     "mysql2": "^3.14.1"
   },
   "devDependencies": {
+    "tailwindcss": "^3.4.17",
     "vercel": "^41.6.1"
   }
 }

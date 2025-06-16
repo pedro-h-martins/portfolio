@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #introducao,
 #projetos,
 #projetos-helpnei,
@@ -31,6 +35,7 @@ a {
   text-decoration: underline !important;
   color: #6ea8fe !important;
 }
+
 .tmn-logo {
   height: 5.75rem;
 }
@@ -75,3 +80,4 @@ a {
     width: 4.5rem;
   }
 }
+

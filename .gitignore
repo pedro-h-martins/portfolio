@@ -2,3 +2,6 @@
 node_modules/
 package-lock.json
 .vercel
+
+#Tailwind CSS Build
+public/css/tailwind/output.css

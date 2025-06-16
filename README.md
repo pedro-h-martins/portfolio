@@ -45,12 +45,22 @@ DB_NAME='seu_banco' --> nome do banco
 
 ### 5️⃣ Rode o projeto
 
-```bash
-# Popula o banco com dados iniciais (Opcional)
-npm run seed
+### Modo Desenvolvimento
+Para executar a aplicação em modo de desenvolvimento (compila o CSS do Tailwind e inicia o servidor):
+```
+npm run dev
+```
 
-# Inicia o servidor
-npm run start
+### Compilar Apenas o CSS
+Para compilar os arquivos CSS do Tailwind sem iniciar o servidor:
+```
+npm run build
+```
+
+### Modo Produção
+Para executar a aplicação em modo de produção:
+```
+npm start
 ```
 
 ---
@@ -78,3 +88,12 @@ npm run start
 ├── package.json        # Configurações e dependências do projeto
 ├── vercel.json         # Configuração para deploy
 ```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+- **Backend:** Node.js, Express
+- **Banco de Dados:** MySQL
+- **Templates:** EJS
+- **Estilo:** Tailwind CSS
+- **Deploy:** Vercel
