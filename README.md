@@ -33,6 +33,11 @@ npm install
 1. Crie um banco de dados MySQL
 
 2. Importe o esquema do banco usando o arquivo `database/portfolioDB.sql`
+3. Utilize o comando abaixo (opcional) para usar os valores pré-definidos no seed:
+   
+```
+npm run seed
+```
 
 ### 4️⃣ Configure o arquivo .env
 
