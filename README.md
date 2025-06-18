@@ -1,6 +1,6 @@
 # 📝 Portfólio - Pedro Henrique Martins
 
-Bem-vindo ao meu portfólio! Este projeto foi desenvolvido utilizando **Node.js** e **Express**. Inclui uma API REST com CRUD completo ligado ao banco de dados **MySQL** para gerenciamento dos dados do portfólio. Foi realizado para demonstrar minhas habilidades e projetos realizados.
+Bem-vindo ao meu portfólio! Este projeto foi desenvolvido utilizando **Node.js** e **Express**. Inclui uma API REST com CRUD completo ligado ao banco de dados **MySQL** para gerenciamento dos dados do portfólio. Esta em uma instancia do **Vercel** + **Railway** para o deploy do site online. Foi realizado para demonstrar minhas habilidades e projetos realizados.
 
 ---
 
@@ -101,4 +101,4 @@ npm start
 - **Banco de Dados:** MySQL
 - **Templates:** EJS
 - **Estilo:** Tailwind CSS
-- **Deploy:** Vercel
+- **Deploy:** Vercel + Railway
