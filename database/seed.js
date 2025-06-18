@@ -12,6 +12,12 @@ const executeQuery = (query, params) => {
 
 async function seedDatabase() {
     try {
+        const [existingUsers] = await db.promise().query('SELECT COUNT(*) as count FROM userData');
+        if (existingUsers[0].count > 0) {
+            console.log('Database already has data. Skipping seed operation.');
+            return;
+        }
+
         console.log('Inserindo dados do header...');
         const headerPromises = headerData.menuItems.map(item => {
             return executeQuery(
@@ -45,7 +51,7 @@ async function seedDatabase() {
     } catch (error) {
         console.error('Erro durante o seeding:', error);
     } finally {
-        db.end();
+        console.log('Seeding concluído.');
     }
 }
 

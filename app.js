@@ -24,10 +24,15 @@ app.use('/api', skillsRoutes);
 
 async function fetchPageData() {
     try {
-        const [users] = await db.promise().query('SELECT * FROM userdata where port_id = 1');
+        const [users] = await db.promise().query('SELECT * FROM userData WHERE port_id = 1');
         const [headers] = await db.promise().query('SELECT * FROM headerData');
         const [resumes] = await db.promise().query('SELECT * FROM resumeData');
         const [skills] = await db.promise().query('SELECT * FROM skillsData');
+
+        if (!users.length || !headers.length) {
+            console.error('No user or header data found. Database might be empty.');
+            return null;
+        }
 
         const headerItems = headers.map(item => ({
             title: item.titulo,
@@ -43,6 +48,7 @@ async function fetchPageData() {
         };
     } catch (error) {
         console.error('Error fetching data:', error);
+        console.error(error.stack);
         return null;
     }
 }
