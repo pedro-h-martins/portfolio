@@ -16,15 +16,18 @@
 
     <main class="max-w-7xl mx-auto mb-24 px-4">
         <article class="container mx-auto">
-            <header class="flex justify-between items-center gap-8 mb-8">
-                <h1 class="text-3xl font-bold text-gray-100">
+            <header class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-8 mb-8">
+                <h1 class="text-2xl sm:text-3xl font-bold text-gray-100 text-center sm:text-left">
                     <%= data.nome %>
                 </h1>
-                <img src="/images/pedro.jpg" class="rounded-lg w-32 h-32 object-cover" alt="<%= data.nome %>">
+                <img src="/images/pedro.jpg" class="rounded-lg w-28 h-28 sm:w-32 sm:h-32 object-cover"
+                    alt="<%= data.nome %>">
             </header>
 
             <section aria-label="Perfil Pessoal">
-                <h2 class="text-2xl font-semibold text-blue-400 border-t border-gray-600 pb-1">PERFIL PESSOAL</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 border-t border-gray-600 pb-1">
+                    PERFIL PESSOAL
+                </h2>
                 <p class="mt-4">Olá, meu nome é <%= data.nome %> e estou à procura da minha primeira experiência no
                         mercado de
                         trabalho.
@@ -42,17 +45,17 @@
                     trabalho.</p>
             </section>
 
-            <div class="flex gap-8 mt-8">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 mt-8">
                 <section class="w-full md:w-1/2" aria-label="Informações de Contato">
                     <div class="mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
-                        <h2 class="text-2xl text-center font-semibold text-blue-400 pb-1">CONTATO</h2>
+                        <h2 class="text-xl sm:text-2xl text-center font-semibold text-blue-400 pb-1">CONTATO</h2>
                         <address>
                             <dl>
                                 <div class="flex items-center space-x-4">
                                     <dt class="sr-only">Email:</dt>
                                     <dd class="flex items-center">
                                         <i class="fas fa-envelope text-blue-400 text-xl" aria-hidden="true"></i>
-                                        <span class="ml-2">
+                                        <span class="ml-2 text-sm sm:text-base break-all">
                                             <%= data.email %>
                                         </span>
                                     </dd>
@@ -61,7 +64,7 @@
                                     <dt class="sr-only">Telefone:</dt>
                                     <dd class="flex items-center">
                                         <i class="fas fa-phone text-blue-400 text-xl" aria-hidden="true"></i>
-                                        <span class="ml-2">
+                                        <span class="ml-2 text-sm sm:text-base">
                                             <%= resume.telefone %>
                                         </span>
                                     </dd>
@@ -70,7 +73,7 @@
                                     <dt class="sr-only">Endereço:</dt>
                                     <dd class="flex items-center">
                                         <i class="fas fa-map-marker-alt text-blue-400 text-xl" aria-hidden="true"></i>
-                                        <span class="ml-2">
+                                        <span class="ml-2 text-sm sm:text-base">
                                             <%= resume.endereco %>
                                         </span>
                                     </dd>
@@ -80,31 +83,33 @@
                     </div>
                 </section>
 
-                <section class="w-full md:w-1/2" aria-label="Formação Acadêmica">
-                    <h2 class="text-2xl font-semibold text-blue-400 border-t border-gray-600 pb-1">FORMAÇÃO ACADÊMICA
+                <section class="w-full md:w-1/2 mt-6 md:mt-0" aria-label="Formação Acadêmica">
+                    <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 border-t border-gray-600 pb-1">
+                        FORMAÇÃO
+                        ACADÊMICA
                     </h2>
-                    <div class="grid grid-cols-3 mt-4">
-                        <article>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+                        <article class="mb-4 sm:mb-0">
                             <h3 class="font-bold">SESI</h3>
-                            <div>Sesi São José dos
-                                <span class="flex gap-1">Campos </span>
-                                <span class="flex gap-1">Jan. 2021 - Dez.</span> 2023</span>
+                            <div class="text-sm sm:text-base">Sesi São José dos
+                                <span class="block sm:flex sm:gap-1">Campos </span>
+                                <span class="block sm:flex sm:gap-1">Jan. 2021 - Dez.</span> 2023</span>
                             </div>
                         </article>
-                        <article>
+                        <article class="mb-4 sm:mb-0">
                             <h3 class="font-bold">SENAI</h3>
-                            <div>Rede de
-                                <span class="flex gap-1">Computadores</span>
-                                Jan. de 2022 - <span class="flex gap-1">Incompleto</span>
+                            <div class="text-sm sm:text-base">Rede de
+                                <span class="block sm:flex sm:gap-1">Computadores</span>
+                                Jan. de 2022 - <span class="block sm:flex sm:gap-1">Incompleto</span>
                             </div>
                         </article>
                         <article>
                             <h3 class="font-bold">FATEC</h3>
-                            <div>Desenvolvimento
-                                <span class="flex gap-1">de Software</span>
-                                <span class="flex gap-1">Multiplataforma</span>
-                                <span class="flex gap-1">Aug. de 2024 -</span>
-                                <span class="flex gap-1">202X</span>
+                            <div class="text-sm sm:text-base">Desenvolvimento
+                                <span class="block sm:flex sm:gap-1">de Software</span>
+                                <span class="block sm:flex sm:gap-1">Multiplataforma</span>
+                                <span class="block sm:flex sm:gap-1">Aug. de 2024 -</span>
+                                <span class="block sm:flex sm:gap-1">202X</span>
                             </div>
                         </article>
                     </div>
@@ -112,12 +117,12 @@
             </div>
 
             <section class="mt-8">
-                <div class="flex gap-8">
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-2xl font-semibold text-blue-400 border border-gray-600 rounded-lg p-2">
+                        <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 border-t border-gray-600 pb-1">
                             HABILIDADES (Soft
                             Skills)</h2>
-                        <ul class="list-disc list-inside mt-4 space-y-2">
+                        <ul class="list-disc list-inside mt-4 space-y-2 text-sm sm:text-base">
                             <li>Pensamento Crítico</li>
                             <li>Resoluções de Problemas</li>
                             <li>Gestão de Tempo</li>
@@ -127,20 +132,21 @@
                         </ul>
                     </div>
 
-                    <div class="w-full content-center md:w-1/2">
-                        <h2 class="text-2xl font-semibold text-blue-400 pb-1">EXPERIENCIA
+                    <div class="w-full content-center md:w-1/2 mt-6 md:mt-0">
+                        <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 pb-1">EXPERIENCIA
                             PROFISSIONAL</h2>
-                        <p class="mt-4">Em busca do primeiro emprego</p>
+                        <p class="mt-4 text-sm sm:text-base">Em busca do primeiro emprego</p>
                     </div>
                 </div>
             </section>
 
             <section class="mt-8">
-                <div class="flex gap-8">
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-2xl font-semibold text-blue-400 border border-gray-600 rounded-lg p-2">
+                        <h2
+                            class="text-xl sm:text-2xl font-semibold text-blue-400 border border-gray-600 rounded-lg p-2">
                             HABILIDADES (Hard Skills)</h2>
-                        <ul class="list-disc list-inside mt-4 space-y-2">
+                        <ul class="list-disc list-inside mt-4 space-y-2 text-sm sm:text-base">
                             <li>Linguagens: <%= skills.lang %>
                             </li>
                             <% if (skills.lang2) { %>
@@ -154,10 +160,11 @@
                                     </li>
                         </ul>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <h2 class="text-2xl font-semibold text-blue-400 pb-1">CERTIFICAÇÕES
+                    <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                        <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 pb-1">
+                            CERTIFICAÇÕES
                         </h2>
-                        <p class="mt-4">
+                        <p class="mt-4 text-sm sm:text-base">
                             <%= resume.cert %>
                         </p>
                     </div>
@@ -166,10 +173,10 @@
         </article>
     </main>
 
-    <footer class="text-center pb-8">
+    <footer class="text-center pb-8 px-4">
         <div class="mt-4">
             <a href="/documents/curriculo-pedro.pdf" download
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center gap-2">
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center gap-2 text-sm sm:text-base">
                 <i class="fas fa-download"></i>
                 <span>BAIXAR PDF</span>
             </a>
