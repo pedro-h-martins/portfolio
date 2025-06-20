@@ -23,11 +23,14 @@
           </div>
           <div class="bg-[#1E293B] p-6 rounded-xl mt-6 w-full shadow-inner">
             <h3 class="text-xl font-bold mb-3 text-center text-[#38BDF8]">Interesses e hobbies</h3>
-            <ul class="space-y-2 text-[#F7FAFC]">
-              <li class="flex items-center"><i class="fas fa-gamepad mr-2 text-[#38BDF8]"></i> Jogar jogos eletrônicos
+            <ul class="space-y-2 px-2 text-[#F7FAFC]">
+              <li class="flex items-center"><i class="fas fa-gamepad mr-2 text-[#38BDF8] w-5 text-center"></i> Jogar
+                jogos eletrônicos
               </li>
-              <li class="flex items-center"><i class="fas fa-tv mr-2 text-[#38BDF8]"></i> Assistir séries</li>
-              <li class="flex items-center"><i class="fas fa-hiking mr-2 text-[#38BDF8]"></i> Sair para caminhar</li>
+              <li class="flex items-center"><i class="fas fa-tv mr-2 text-[#38BDF8] w-5 text-center"></i> Assistir
+                séries</li>
+              <li class="flex items-center"><i class="fas fa-hiking mr-2 text-[#38BDF8] w-5 text-center"></i>Sair para
+                caminhar</li>
             </ul>
           </div>
         </div>
@@ -67,39 +70,37 @@
             <div class="flex justify-center">
               <div class="bg-[#1E293B] p-6 rounded-xl shadow-inner">
                 <div class="flex flex-wrap justify-center gap-6">
-                  <a href="https://br.linkedin.com/in/pedro-henrique-martins-55a0752a4" class="text-white logo group"
-                    target="_blank">
+                  <a href="https://br.linkedin.com/in/pedro-henrique-martins-55a0752a4"
+                    class="text-white logo icon-link" target="_blank">
                     <div class="flex flex-col items-center transform transition hover:scale-110">
                       <div class="bg-[#0A66C2] p-3 rounded-lg shadow-lg mb-2">
                         <img src="/images/linkedinlogo.png" alt="LinkedIn" class="w-10 h-10" />
                       </div>
-                      <span class="pt-1 group-hover:text-[#38BDF8]">LinkedIn</span>
+                      <span class="pt-1">LinkedIn</span>
                     </div>
                   </a>
-                  <a href="https://github.com/pedro-h-martins" class="text-white logo group" target="_blank">
+                  <a href="https://github.com/pedro-h-martins" class="text-white logo icon-link" target="_blank">
                     <div class="flex flex-col items-center transform transition hover:scale-110">
                       <div class="bg-[#24292E] p-3 rounded-lg shadow-lg mb-2">
                         <img src="/images/githublogo.png" alt="GitHub" class="w-10 h-10" />
                       </div>
-                      <span class="pt-1 group-hover:text-[#38BDF8]">GitHub</span>
+                      <span class="pt-1">GitHub</span>
                     </div>
                   </a>
-                  <div class="text-white logo group">
+                  <button id="emailBtn" class="text-white logo" onclick="openModal()">
                     <div class="flex flex-col items-center transform transition hover:scale-110">
                       <div class="bg-[#EA4335] p-3 rounded-lg shadow-lg mb-2">
                         <img src="/images/email.png" alt="Email" class="w-10 h-10" />
                       </div>
-                      <span class="pt-1 group-hover:text-[#38BDF8]">
-                        <%= data.email %>
-                      </span>
+                      <span class="pt-1">Email</span>
                     </div>
-                  </div>
-                  <a href="/documents/curriculo-pedro.pdf" class="text-white logo group" target="_blank">
+                  </button>
+                  <a href="/documents/curriculo-pedro.pdf" class="text-white logo icon-link" target="_blank">
                     <div class="flex flex-col items-center transform transition hover:scale-110">
                       <div class="bg-[#4285F4] p-3 rounded-lg shadow-lg mb-2">
                         <img src="/images/sheet.png" alt="Currículo" class="w-10 h-10" />
                       </div>
-                      <span class="pt-1 group-hover:text-[#38BDF8]">Currículo</span>
+                      <span class="pt-1">Currículo</span>
                     </div>
                   </a>
                 </div>
@@ -197,6 +198,75 @@
   <footer class="bg-[#1A202C] text-center py-8 border-t border-[#2D3748] mt-16">
     <%- include('./partials/footer.ejs'); %>
   </footer>
+
+  <!-- Modal do Email -->
+  <div id="emailModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+    <div class="bg-[#2D3748] rounded-xl shadow-lg p-6 max-w-md w-full mx-4 transform transition-all">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-[#38BDF8]">Email para contato profissional:</h3>
+        <button onclick="closeModal()" class="text-[#F7FAFC] hover:text-[#38BDF8]">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      <div class="bg-[#1E293B] p-4 rounded-lg shadow-inner mb-4">
+        <div class="flex items-center">
+          <div class="bg-[#EA4335] p-2 rounded-lg shadow-md mr-3">
+            <img src="/images/email.png" alt="Email" class="w-6 h-6" />
+          </div>
+          <p class="text-[#F7FAFC] break-all">
+            <%= data.email %>
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-end">
+        <button onclick="copyEmail()"
+          class="bg-[#38BDF8] hover:bg-[#0EA5E9] text-white py-2 px-4 rounded-lg shadow-md transition duration-300 flex items-center">
+          <i id="copyIcon" class="fas fa-copy mr-2"></i>
+          <span id="copyText">Copiar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('emailModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('emailModal').classList.add('hidden');
+    }
+
+    function copyEmail() {
+      const email = '<%= data.email %>';
+      navigator.clipboard.writeText(email).then(() => {
+        const copyIcon = document.getElementById('copyIcon');
+        const copyText = document.getElementById('copyText');
+
+        copyIcon.classList.remove('fa-copy');
+        copyIcon.classList.add('fa-check');
+        copyText.textContent = 'Copiado!';
+
+        setTimeout(() => {
+          copyIcon.classList.remove('fa-check');
+          copyIcon.classList.add('fa-copy');
+          copyText.textContent = 'Copiar';
+        }, 2000);
+      });
+    }
+
+    document.getElementById('emailModal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 
 </html>

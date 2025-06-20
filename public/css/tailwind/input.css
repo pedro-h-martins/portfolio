@@ -60,10 +60,16 @@ h2 {
 a {
   color: #38BDF8 !important;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #0EA5E9 !important;
+  color: #F7FAFC !important;
+  background-color: #38BDF8;
+}
+
+.icon-link:hover {
+  background-color: transparent !important;
 }
 
 .bg-blue-500 {
