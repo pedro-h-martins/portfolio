@@ -52,6 +52,15 @@ async function seedDatabase() {
         console.error('Erro durante o seeding:', error);
     } finally {
         console.log('Seeding concluído.');
+        
+        db.end(err => {
+            if (err) {
+                console.error('Erro ao encerrar a conexão com o banco de dados:', err);
+                process.exit(1);
+            }
+            console.log('Conexão com o banco de dados encerrada.');
+            process.exit(0);
+        });
     }
 }
 
