@@ -5,13 +5,15 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./public/css/tailwind/input.css -o ./public/css/tailwind/output.css",
-    "vercel-build": "npm run build && npm run test-db",
-    "test-db": "node tools/test-db-connection.js",
+    "start": "node app.js",
     "dev": "npm run build && node app.js",
+    "build": "tailwindcss -i ./public/css/tailwind/input.css -o ./public/css/tailwind/output.css",
+    "vercel-build": "npm run reset-db && npm run build && npm run test-db",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-db": "node tools/test-db-connection.js",
     "seed": "node database/seed.js",
-    "start": "node app.js"
+    "remove-all": "node database/remove-all.js",
+    "reset-db": "node database/remove-all.js && node database/seed.js"
   },
   "repository": {
     "type": "git",
