@@ -2,46 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-#introducao,
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+}
+
 #projetos,
 #projetos-helpnei,
 #certificados {
-  font-family: Impact;
-  color: #66c0f4;
+  color: #38BDF8;
 }
 
-.navbar {
-  font-family: monospace;
+.card {
+  background-color: #2D3748;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .titulo {
-  color: #0d6efd !important;
+  color: #0EA5E9 !important;
 }
 
 p {
-  color: #f0e6e6;
+  color: #F7FAFC;
+  line-height: 1.6;
 }
 
 h2 {
-  color: #719ebe !important;
+  color: #38BDF8 !important;
 }
 
 .logo {
   text-decoration: none !important;
-  color: #fefefe !important;
+  color: #F7FAFC !important;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #38BDF8 !important;
 }
 
 a {
-  text-decoration: underline !important;
-  color: #6ea8fe !important;
+  color: #38BDF8 !important;
+  transition: color 0.3s ease;
 }
 
-.tmn-logo {
-  height: 5.75rem;
-}
-
-.tmn-itens {
-  width: 3.441rem;
+a:hover {
+  color: #0EA5E9 !important;
 }
 
 .bg-blue-500 {
@@ -50,14 +72,6 @@ a {
 }
 
 @media (max-width: 1080px) {
-  .tmn-logo {
-    height: 4rem;
-  }
-
-  .tmn-itens {
-    width: 2rem;
-  }
-
   .md\:w-1\/2 {
     margin: 1rem 0;
   }
@@ -68,16 +82,6 @@ a {
 
   .flex.justify-center.h-24 {
     margin: 1rem 0;
-  }
-}
-
-@media (min-width: 2160px) {
-  .tmn-logo {
-    height: 7rem;
-  }
-
-  .tmn-itens {
-    width: 4.5rem;
   }
 }
 

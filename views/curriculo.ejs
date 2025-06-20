@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
-    <link rel="stylesheet" href="css/tailwind/input.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/tailwind/output.css" />
-    </script>
 </head>
 
 <body class="pt-20 dark bg-[#212529] text-gray-300">
@@ -145,24 +143,23 @@
                         <ul class="list-disc list-inside mt-4 space-y-2">
                             <li>Linguagens: <%= skills.lang %>
                             </li>
-                            <li class="list-none ml-6">
-                                <%= skills.lang2 %>
-                            </li>
-                            <li>Frameworks: <%= skills.fworks %>
-                            </li>
-                            <li>Ferramentas: <%= skills.tools %>
-                            </li>
+                            <% if (skills.lang2) { %>
+                                <li class="list-none ml-6">
+                                    <%= skills.lang2 %>
+                                </li>
+                                <% } %>
+                                    <li>Frameworks: <%= skills.fworks %>
+                                    </li>
+                                    <li>Ferramentas: <%= skills.tools %>
+                                    </li>
                         </ul>
                     </div>
-
                     <div class="w-full md:w-1/2">
-                        <div class="w-full md:w-1/2">
-                            <h2 class="text-2xl font-semibold text-blue-400 pb-1">CERTIFICAÇÕES
-                            </h2>
-                            <p class="mt-4">
-                                <%= resume.cert %>
-                            </p>
-                        </div>
+                        <h2 class="text-2xl font-semibold text-blue-400 pb-1">CERTIFICAÇÕES
+                        </h2>
+                        <p class="mt-4">
+                            <%= resume.cert %>
+                        </p>
                     </div>
                 </div>
             </section>

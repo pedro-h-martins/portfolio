@@ -1,57 +1,83 @@
-<article class="text-center mb-32">
-  <div class="bg-transparent rounded-lg overflow-hidden">
+<article class="mb-32">
+  <div class="bg-[#2D3748] rounded-xl shadow-card overflow-hidden">
     <div class="flex flex-col md:flex-row">
-      <div class="md:w-1/2 p-4">
-        <h1 id="projetos" class="text-4xl font-bold mb-4 text-center">
+      <div class="md:w-1/2 p-6">
+        <h1 id="projetos" class="text-3xl font-bold mb-6 text-[#38BDF8] text-center relative">
           Site Vereadores SJC
         </h1>
-        <iframe width="100%" height="300"
-          src="https://www.youtube.com/embed/o4FedTRK9qg?si=2A0sdE0VcthzVyyW&amp;controls=0"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="mt-4">
-          <a href="https://github.com/pedro-h-martins/pedro-the-devs-department-api1" class="text-blue-500">Projeto
-            no Github</a>
+
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe width="100%" height="300"
+            src="https://www.youtube.com/embed/o4FedTRK9qg?si=2A0sdE0VcthzVyyW&amp;controls=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="mt-4">
-          <h2 class="text-2xl font-bold">Desafio:</h2>
-          <p>
+
+        <div class="mt-6 flex justify-center">
+          <a href="https://github.com/pedro-h-martins/pedro-the-devs-department-api1"
+            class="bg-[#1E293B] hover:bg-[#0EA5E9] text-white no-underline py-2 px-6 rounded-lg shadow-md transition duration-300 flex items-center">
+            <i class="fab fa-github mr-2"></i> Ver no GitHub
+          </a>
+        </div>
+
+        <div class="mt-6 bg-[#1E293B] p-5 rounded-lg shadow-inner">
+          <h2 class="text-2xl font-bold text-[#38BDF8]">Desafio:</h2>
+          <p class="mt-2 text-[#F7FAFC]">
             Site atual da prefeitura tem difícil e confuso acesso para
             saber o que cada vereador realiza.
           </p>
         </div>
-        <div class="mt-4">
-          <h2 class="text-2xl font-bold">Solução:</h2>
-          <p>
+
+        <div class="mt-4 bg-[#1E293B] p-5 rounded-lg shadow-inner">
+          <h2 class="text-2xl font-bold text-[#38BDF8]">Solução:</h2>
+          <p class="mt-2 text-[#F7FAFC]">
             Criar um site mais amigável e intuitivo para o usuário leigo
             conseguir obter essas informações.
           </p>
         </div>
       </div>
-      <div class="md:w-1/2 p-4 pt-20">
-        <p class="text-center">
-          Desenvolvi um site para consultar informações do mandato de
-          2021-2024, dos vereadores de São José dos Campos, utilizando
-          como base, dados públicos, principalmente disponíveis no site
-          Câmara Sem Papel de SJC. Eu fui responsável pelo back-end dos
-          filtros, realizei alterações na página vereador e fiz
-          <em>merges</em> das repos na branch principal.
-        </p>
-        <h2 class="text-2xl font-bold mt-4">Tecnologias Utilizadas:</h2>
-        <div class="flex flex-col items-center gap-4 mt-4">
-          <div class="flex gap-4 mb-4">
-            <img src="/images/html5logo.png" alt="HTML5" class="h-20 w-auto" />
-            <img src="/images/css3logo.png" alt="CSS3" class="h-20 w-auto" />
-            <img src="/images/jslogo.png" alt="JavaScript" class="h-20 w-auto" />
-            <div class="text-center">
-              <img src="/images/pythonlogo.png" alt="Python" class="h-20 w-auto" />
-              <p class="mt-2">Python</p>
+
+      <div class="md:w-1/2 p-6">
+        <div class="bg-[#1E293B] p-6 rounded-lg shadow-inner mb-6">
+          <p class="text-[#F7FAFC] leading-relaxed">
+            Desenvolvi um site para consultar informações do mandato de
+            2021-2024, dos vereadores de São José dos Campos, utilizando
+            como base, dados públicos, principalmente disponíveis no site
+            Câmara Sem Papel de SJC. Eu fui responsável pelo back-end dos
+            filtros, realizei alterações na página vereador e fiz
+            merges das repos na branch principal.
+          </p>
+        </div>
+        <div class="bg-[#1E293B] p-6 rounded-lg shadow-inner">
+          <h2 class="text-2xl font-bold text-[#38BDF8] mb-4">Tecnologias Utilizadas</h2>
+          <div class="grid grid-cols-3 gap-4 mt-4 mx-auto w-3/4">
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/html5logo.png" alt="HTML5" class="h-12 sm:h-16 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">HTML5</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/css3logo.png" alt="CSS3" class="h-12 sm:h-16 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">CSS3</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/jslogo.png" alt="JavaScript" class="h-12 sm:h-16 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">JavaScript</p>
             </div>
           </div>
-          <div class="flex gap-4">
-            <img src="/images/mysql-logo.png" alt="MySQL" class="h-20 w-auto" />
-            <img src="/images/flasklogo.png" alt="Flask" class="h-20 w-auto" />
+          <div class="grid grid-cols-3 gap-4 mt-4 mx-auto w-3/4">
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/pythonlogo.png" alt="Python" class="h-12 sm:h-16 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">Python</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/mysql-logo.png" alt="MySQL" class="h-12 sm:h-16 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">MySQL</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/flasklogo.png" alt="Flask" class="h-12 sm:h-16 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">Flask</p>
+            </div>
           </div>
         </div>
       </div>
@@ -59,56 +85,89 @@
   </div>
 </article>
 
-<article class="text-center mb-32">
-  <div class="bg-transparent rounded-lg overflow-hidden">
+<article class="mb-32">
+  <div class="bg-[#2D3748] rounded-xl shadow-card overflow-hidden">
     <div class="flex flex-col md:flex-row">
-      <div class="md:w-1/2 p-4">
-        <h1 id="projetos-helpnei" class="text-4xl font-bold mb-4 text-center">
+      <div class="md:w-1/2 p-6">
+        <h1 id="projetos-helpnei" class="text-3xl font-bold mb-6 text-[#38BDF8] text-center relative">
           Projeto Helpnei
         </h1>
-        <iframe width="100%" height="300" src="https://www.youtube.com/embed/bwsLHyKiF4Y"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="mt-4">
-          <a href="https://github.com/pedro-h-martins/helpnei" class="text-blue-500">Projeto no Github</a>
+
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/bwsLHyKiF4Y" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="mt-4">
-          <h2 class="text-2xl font-bold">Desafio:</h2>
-          <p>
-            Os patrocinadores querem ver seus dados e a evolução deles de forma mais efetiva e facil
+
+        <div class="mt-6 flex justify-center">
+          <a href="https://github.com/pedro-h-martins/helpnei"
+            class="bg-[#1E293B] hover:bg-[#0EA5E9] text-white no-underline py-2 px-6 rounded-lg shadow-md transition duration-300 flex items-center">
+            <i class="fab fa-github mr-2"></i> Ver no GitHub
+          </a>
+        </div>
+
+        <div class="mt-6 bg-[#1E293B] p-5 rounded-lg shadow-inner">
+          <h2 class="text-2xl font-bold text-[#38BDF8]">Desafio:</h2>
+          <p class="mt-2 text-[#F7FAFC]">
+            Os patrocinadores querem ver seus dados e a evolução deles de forma mais efetiva e fácil.
           </p>
         </div>
-        <div class="mt-4">
-          <h2 class="text-2xl font-bold">Solução:</h2>
-          <p>
+
+        <div class="mt-4 bg-[#1E293B] p-5 rounded-lg shadow-inner">
+          <h2 class="text-2xl font-bold text-[#38BDF8]">Solução:</h2>
+          <p class="mt-2 text-[#F7FAFC]">
             Criar um site para o aplicativo da Helpnei, que mostre informações no dashboard e permita convites de
-            patrocínio
-            de usuários em base o perfil dos mesmos.
+            patrocínio de usuários com base no perfil dos mesmos.
           </p>
         </div>
       </div>
-      <div class="md:w-1/2 p-4 pt-20">
-        <p class="text-center">
-          Desenvolvi um site para que permite visualizar dashboard de cada empresa, realizar cadastro de usuários e
-          pedir patrocínio de
-          empresas interessadas
-          no perfil do usuário cadastrado. Eu tive como responsabilidades, integrar o Back com o Front, criar a API
-          com CRUD
-          dos dados do banco do site, criar o manual do usuário e realizar operações no git para juntar os commits.
-        </p>
-        <h2 class="text-2xl font-bold mt-4">Tecnologias Utilizadas:</h2>
-        <div class="flex flex-col items-center gap-4 mt-4">
-          <div class="flex gap-4 mb-4">
-            <img src="/images/html5logo.png" alt="HTML5" class="h-20 w-auto" />
-            <img src="/images/css3logo.png" alt="CSS3" class="h-20 w-auto" />
-            <img src="/images/tslogo.png" alt="Typescript" class="h-20 w-auto" title="Typescript" />
+
+      <div class="md:w-1/2 p-6">
+        <div class="bg-[#1E293B] p-6 rounded-lg shadow-inner mb-6">
+          <p class="text-[#F7FAFC] leading-relaxed">
+            Desenvolvi um site que permite visualizar dashboard de cada empresa, realizar cadastro de usuários e
+            pedir patrocínio de empresas interessadas no perfil do usuário cadastrado. Eu tive como responsabilidades
+            integrar o Back com o Front, criar a API com CRUD dos dados do banco do site, criar o manual do usuário
+            e realizar operações no git para juntar os commits.
+          </p>
+        </div>
+
+        <div class="bg-[#1E293B] p-6 rounded-lg shadow-inner">
+          <h2 class="text-2xl font-bold text-[#38BDF8] mb-4">Tecnologias Utilizadas</h2>
+          <!-- Primeira linha (1-4) -->
+          <div class="grid grid-cols-4 gap-3 mt-4">
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/html5logo.png" alt="HTML5" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">HTML5</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/css3logo.png" alt="CSS3" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">CSS3</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/tslogo.png" alt="TypeScript" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">TypeScript</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/nodejslogo.png" alt="NodeJS" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">Node.js</p>
+            </div>
           </div>
-          <div class="flex gap-4">
-            <img src="/images/nodejslogo.png" alt="NodeJS" class="h-20 w-auto" title="NodeJS" />
-            <img src="/images/expressjslogo.png" alt="ExpressJS" class="h-20 w-auto" title="ExpressJS" />
-            <img src="/images/reactlogo.png" alt="ReactJS" class="h-20 w-auto" title="ReactJS" />
-            <img src="/images/mysql-logo.png" alt="MySQL" class="h-20 w-auto" />
+          <!-- Segunda linha (5-7) -->
+          <div class="grid grid-cols-3 gap-3 mt-4 mx-auto w-3/4">
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/expressjslogo.png" alt="ExpressJS" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">Express</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/reactlogo.png" alt="ReactJS" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">React</p>
+            </div>
+            <div class="flex flex-col items-center bg-[#2D3748] p-3 rounded-lg transition-transform hover:scale-105">
+              <img src="/images/mysql-logo.png" alt="MySQL" class="h-14 w-auto" />
+              <p class="mt-2 text-[#F7FAFC] text-sm">MySQL</p>
+            </div>
           </div>
         </div>
       </div>

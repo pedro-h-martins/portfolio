@@ -1,41 +1,42 @@
-<nav class="fixed top-0 left-0 right-0 bg-primary">
+<nav class="fixed top-0 left-0 right-0 bg-[#1E3A8A] shadow-lg z-50">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="flex items-center justify-between lg:justify-center">
-      <button class="lg:hidden p-2" type="button"
-        onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        <span class="block w-6 h-0.5 bg-black mb-1"></span>
-        <span class="block w-6 h-0.5 bg-black mb-1"></span>
-        <span class="block w-6 h-0.5 bg-black"></span>
-      </button>
-      <div class="hidden lg:flex justify-center w-full py-4" id="mobileMenu">
-        <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-8" id="menuItems">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center py-4">
+        <span class="text-white font-display font-bold text-xl">Pedro-<span
+            class="text-[#38BDF8]">Portfolio</span></span>
+      </div>
+
+      <div class="hidden md:block">
+        <ul class="flex space-x-8" id="menuDesktop">
           <% header.menuItems.forEach(function(item) { %>
             <li>
-              <a class="text-white hover:text-secondary block text-center logo" href="<%= item.href %>">
+              <a class="text-white hover:text-[#38BDF8] py-2 px-3 rounded-md transition duration-300 font-medium text-center"
+                href="<%= item.href %>">
                 <%= item.title %>
               </a>
             </li>
             <% }); %>
         </ul>
       </div>
-      <script>
-        async function updateMenuItems() {
-          try {
-            const headers = await getHeaders();
-            const menuList = document.getElementById('menuItems');
-            if (headers && headers.length > 0) {
-              menuList.innerHTML = headers.map(item => `
-                <li>
-                  <a class="text-white hover:text-secondary block text-center logo" href="${item.href}">${item.titulo}</a>
-                </li>
-              `).join('');
-            }
-          } catch (error) {
-            console.error('Error updating menu items:', error);
-          }
-        }
-        document.addEventListener('DOMContentLoaded', updateMenuItems);
-      </script>
+
+      <button class="md:hidden p-2 text-white focus:outline-none" type="button"
+        onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="hidden md:hidden" id="mobileMenu">
+      <ul class="pt-2 pb-4 space-y-2" id="menuItems">
+        <% header.menuItems.forEach(function(item) { %>
+          <li>
+            <a class="block py-2 px-4 text-white hover:bg-[#2A4594] rounded-md transition duration-300"
+              href="<%= item.href %>">
+              <%= item.title %>
+            </a>
+          </li>
+          <% }); %>
+      </ul>
     </div>
   </div>
 </nav>
