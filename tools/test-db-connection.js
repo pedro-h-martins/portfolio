@@ -1,4 +1,4 @@
-import dotenv from 'dotenv';
+z'import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 import { spawn } from 'child_process';
 import path from 'path';

@@ -1,5 +1,11 @@
 import db from '../config/db.js';
 import { headerData, userData, resumeData } from '../data.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const executeQuery = (query, params) => {
     return new Promise((resolve, reject) => {
@@ -10,8 +16,30 @@ const executeQuery = (query, params) => {
     });
 };
 
+async function ensureSchema() {
+    try {
+        const [rows] = await db.promise().query("SHOW TABLES LIKE 'userData'");
+        if (rows.length > 0) return;
+
+        console.log('Tabelas não existem. Criando estrutura do banco a partir de `portfolioDB.sql`...');
+        const schemaPath = path.join(__dirname, '../database/portfolioDB.sql');
+        const fs = await import('fs');
+        const schemaSql = fs.readFileSync(schemaPath, 'utf8');
+        const queries = schemaSql.split(';').map(q => q.trim()).filter(q => q.length);
+        for (const q of queries) {
+            await db.promise().query(q);
+        }
+        console.log('Estrutura do banco criada.');
+    } catch (err) {
+        console.error('Erro ao garantir schema:', err.message);
+        throw err;
+    }
+}
+
 async function seedDatabase() {
     try {
+        await ensureSchema();
+
         const [existingUsers] = await db.promise().query('SELECT COUNT(*) as count FROM userData');
         if (existingUsers[0].count > 0) {
             console.log('Database already has data. Skipping seed operation.');
