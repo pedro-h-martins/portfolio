@@ -23,7 +23,7 @@ app.use('/api', resumeRoutes);
 app.use('/api', headerRoutes);
 app.use('/api', skillsRoutes);
 
-async function fetchPageData() {    
+async function fetchPageData(currentPage) {    
     try {
         const [users] = await db.promise().query('SELECT * FROM userData WHERE port_id = 1');
         const [headers] = await db.promise().query('SELECT * FROM headerData ORDER BY id');
@@ -46,6 +46,7 @@ async function fetchPageData() {
         })).sort((a, b) => a.order - b.order);
 
         return {
+            currentPage,
             header: { menuItems: headerItems },
             footer: { rights: "@Pedro Henrique Martins. Todos os direitos reservados." },
             data: users[0],
@@ -60,7 +61,7 @@ async function fetchPageData() {
 }
 
 app.get('/', async (req, res) => {
-    const data = await fetchPageData();
+    const data = await fetchPageData('index');
     if (data) {
         res.render('index', data);
     } else {
@@ -69,7 +70,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/curriculo', async (req, res) => {
-    const data = await fetchPageData();
+    const data = await fetchPageData('curriculo');
     if (data) {
         res.render('curriculo', data);
     } else {

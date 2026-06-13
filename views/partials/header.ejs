@@ -11,7 +11,7 @@
           <% header.menuItems.forEach(function(item) { %>
             <li>
               <a class="text-white hover:text-[#38BDF8] py-2 px-3 rounded-md transition duration-300 font-medium text-center"
-                href="<%= item.href %>">
+                href="<%= currentPage !== 'index' && item.href.startsWith('#') ? '../' + item.href : item.href %>">
                 <%= item.title %>
               </a>
             </li>
@@ -31,7 +31,7 @@
         <% header.menuItems.forEach(function(item) { %>
           <li>
             <a class="block py-2 px-4 text-white hover:bg-[#2A4594] rounded-md transition duration-300"
-              href="<%= item.href %>">
+              href="<%= currentPage !== 'index' && item.href.startsWith('#') ? '../' + item.href : item.href %>">
               <%= item.title %>
             </a>
           </li>
