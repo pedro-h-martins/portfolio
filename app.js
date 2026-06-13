@@ -23,7 +23,7 @@ app.use('/api', resumeRoutes);
 app.use('/api', headerRoutes);
 app.use('/api', skillsRoutes);
 
-async function fetchPageData(currentPage) {    
+async function fetchPageData(currentPage = 'index') {    
     try {
         const [users] = await db.promise().query('SELECT * FROM userData WHERE port_id = 1');
         const [headers] = await db.promise().query('SELECT * FROM headerData ORDER BY id');

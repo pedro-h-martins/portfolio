@@ -13,9 +13,8 @@ async function ensureOut() {
   await fs.mkdir(outDir, { recursive: true });
 }
 
-function buildPageData(currentPage) {
+function buildPageData() {
   return {
-    currentPage,
     header: { menuItems: headerData.menuItems },
     footer: footerData,
     data: {
@@ -67,8 +66,10 @@ async function copyPublic() {
 async function run() {
   try {
     await ensureOut();
-    await renderTemplate('index.ejs', 'index.html', buildPageData('index'));
-    await renderTemplate('curriculo.ejs', 'curriculo.html', buildPageData('curriculo'));
+    const pageData = buildPageData();
+
+    await renderTemplate('index.ejs', 'index.html', { ...pageData, currentPage: 'index' });
+    await renderTemplate('curriculo.ejs', 'curriculo.html', { ...pageData, currentPage: 'curriculo' });
 
     await copyPublic();
 
