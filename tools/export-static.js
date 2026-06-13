@@ -15,7 +15,6 @@ async function ensureOut() {
 
 function buildPageData() {
   return {
-    basePath: process.env.BASE_PATH || '/portfolio/',
     header: { menuItems: headerData.menuItems },
     footer: footerData,
     data: {
