@@ -8,16 +8,14 @@
     "start": "node app.js",
     "dev": "npm run build && node app.js",
     "build": "tailwindcss -i ./public/css/tailwind/input.css -o ./public/css/tailwind/output.css",
-    "vercel-build": "npm run reset-db && npm run build && npm run test-db",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test-db": "node tools/test-db-connection.js",
-    "seed": "node database/seed.js",
-    "remove-all": "node database/remove-all.js",
-    "reset-db": "node database/remove-all.js && node database/seed.js"
+    "export": "node tools/export-static.js",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "npx gh-pages -d docs -r https://github.com/pedro-h-martins/portfolio.git",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedro-h-martins/pedro-h-martins.github.io.git"
+    "url": "git+https://github.com/pedro-h-martins/portfolio.git"
   },
   "keywords": [
     "pedro-h-martins",

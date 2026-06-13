@@ -1,9 +1,9 @@
 export const headerData = {
     menuItems: [
-        { title: "Introdução", href: "/#", order: 1 },
-        { title: "Principais Projetos", href: "/#principais-projetos", order: 2 },
-        { title: "Certificados", href: "/#certificados", order: 3 },
-        { title: "Curriculo", href: "/curriculo", order: 4 }
+        { title: "Introdução", href: "#", order: 1 },
+        { title: "Principais Projetos", href: "#principais-projetos", order: 2 },
+        { title: "Certificados", href: "#certificados", order: 3 },
+        { title: "Curriculo", href: "curriculo", order: 4 }
     ]
 };
 
