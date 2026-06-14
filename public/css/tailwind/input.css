@@ -1,80 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #1E3A8A;
+  --color-secondary: #38BDF8;
+  --color-accent: #0EA5E9;
+  --color-dark-100: #2D3748;
+  --color-dark-200: #1A202C;
+  --color-dark-300: #171923;
+  --color-light-100: #F7FAFC;
+  --color-light-200: #EDF2F7;
+  --color-light-300: #E2E8F0;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-display: 'Montserrat', sans-serif;
+  --font-family-mono: 'Fira Code', monospace;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@source "../views/";
+@source "../public/";
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-family-display);
   font-weight: 700;
 }
 
 code, pre {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-family-mono);
 }
 
 #projetos,
 #projetos-helpnei,
 #certificados {
-  color: #38BDF8;
+  color: var(--color-secondary);
 }
 
 .card {
-  background-color: #2D3748;
+  background-color: var(--color-dark-100);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card);
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .titulo {
-  color: #0EA5E9 !important;
+  color: var(--color-accent);
 }
 
 p {
-  color: #F7FAFC;
+  color: var(--color-light-100);
   line-height: 1.6;
 }
 
 h2 {
-  color: #38BDF8 !important;
+  color: var(--color-secondary);
 }
 
 .logo {
-  text-decoration: none !important;
-  color: #F7FAFC !important;
+  text-decoration: none;
+  color: var(--color-light-100);
   transition: color 0.3s ease;
 }
 
 .logo:hover {
-  color: #38BDF8 !important;
+  color: var(--color-secondary);
 }
 
 a {
-  color: #38BDF8 !important;
+  color: var(--color-secondary);
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 a:hover {
-  color: #F7FAFC !important;
-  background-color: #38BDF8;
+  color: var(--color-light-100);
+  background-color: var(--color-secondary);
 }
 
 .icon-link:hover {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .bg-blue-500 {
-  text-decoration: none !important;
-  color: white !important;
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 1080px) {
@@ -90,4 +110,3 @@ a:hover {
     margin: 1rem 0;
   }
 }
-

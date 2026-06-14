@@ -29,14 +29,11 @@
   "homepage": "https://github.com/pedro-h-martins/pedro-h-martins.github.io#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
-    "dotenv": "^16.5.0",
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "mysql2": "^3.14.1",
-    "railway": "^2.0.17"
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17",
-    "vercel": "^41.6.1"
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
   }
 }
