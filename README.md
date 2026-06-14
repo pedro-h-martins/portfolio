@@ -1,6 +1,6 @@
 # 📝 Portfólio - Pedro Henrique Martins
 
-Bem-vindo ao meu portfólio! Este projeto foi desenvolvido utilizando **Node.js** e **Express**. Inclui uma API REST com CRUD completo ligado ao banco de dados **MySQL** para gerenciamento dos dados do portfólio. Esta em uma instancia do **Vercel** + **Railway** para o deploy do site online. Foi realizado para demonstrar minhas habilidades e projetos realizados.
+Bem-vindo ao meu portfólio! Este projeto é um site estático de portfólio pessoal, desenvolvido com templates **EJS** e estilização **Tailwind CSS**. Os dados são gerenciados via arquivos JavaScript e o site é exportado para HTML estático, hospedado no **GitHub Pages**. Foi realizado para demonstrar minhas habilidades e projetos realizados.
 
 ---
 
@@ -10,7 +10,7 @@ Antes de começar, certifique-se de ter os seguintes componentes:
 
 - [📦 Node.js](https://nodejs.org/en) (versão recomendada: 18+)
 - [🔧 Git](https://git-scm.com/)
-- [🐬 MySQL](https://dev.mysql.com/downloads/mysql/) (a versão deve ser 8+)
+- [@tailwindcss/cli](https://tailwindcss.com/docs/installation) (instalado via npm)
 
 ---
 
@@ -28,77 +28,30 @@ cd portfolio
 npm install
 ```
 
-### 3️⃣ Configure o banco de dados
+### 3️⃣ Compile o CSS e exporte o site
 
-1. Crie um banco de dados MySQL
-
-2. Importe o esquema do banco usando o arquivo `database/portfolioDB.sql`
-3. Utilize o comando abaixo (opcional) para usar os valores pré-definidos no seed:
-   
-```
-npm run seed
-```
-
-### 4️⃣ Configure o arquivo .env
+Para compilar os arquivos CSS do Tailwind e gerar os arquivos estáticos:
 
 ```bash
-DB_HOST='localhost' --> endereço do host
-DB_USER='seu_usuario' --> nome do usuário
-DB_PASSWORD='sua_senha' --> senha do usuário
-DB_NAME='seu_banco' --> nome do banco
+npm run build      # Compila o CSS do Tailwind
+npm run export     # Gera os arquivos HTML estáticos na pasta docs/
 ```
 
-### 5️⃣ Rode o projeto
+Ou, em um único comando:
 
-### Modo Desenvolvimento
-Para executar a aplicação em modo de desenvolvimento (compila o CSS do Tailwind e inicia o servidor):
-```
-npm run dev
+```bash
+npm run predeploy  # Executa build + export automaticamente
 ```
 
-### Compilar Apenas o CSS
-Para compilar os arquivos CSS do Tailwind sem iniciar o servidor:
-```
-npm run build
-```
+### 4️⃣ Visualize o site
 
-### Modo Produção
-Para executar a aplicação em modo de produção:
-```
-npm start
-```
-
----
-
-## 🗂️ Estrutura do repositório
-
-```plaintext
-├── config/             # Configurações do projeto
-│   ├── db.js           # Configuração do banco de dados
-├── controllers/        # Controladores da aplicação
-├── database/           # Arquivos relacionados ao banco de dados
-│   ├── portfolioDB.sql # Esquema do banco de dados
-│   ├── seed.js         # Script para popular o banco
-├── public/             # Arquivos estáticos
-│   ├── css/            # Folhas de estilo
-│   ├── documents/      # Arquivos de documentos
-│   ├── images/         # Imagens do projeto
-├── routes/             # Rotas da aplicação
-├── views/              # Templates EJS
-│   ├── curriculo.ejs   # Página do currículo
-│   ├── index.ejs       # Página principal
-│   ├── partials/       # Componentes reutilizáveis
-├── app.js              # Arquivo principal da aplicação
-├── data.js             # Dados para o banco de dados
-├── package.json        # Configurações e dependências do projeto
-├── vercel.json         # Configuração para deploy
-```
+Abra o arquivo `docs/index.html` no seu navegador ou utilize uma extensão de live server.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-- **Backend:** Node.js, Express
-- **Banco de Dados:** MySQL
+- **Runtime:** Node.js
 - **Templates:** EJS
 - **Estilo:** Tailwind CSS
-- **Deploy:** Vercel + Railway
+- **Exportação:** HTML estático
+- **Deploy:** GitHub Pages
