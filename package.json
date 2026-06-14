@@ -5,8 +5,6 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "dev": "npm run build && node app.js",
     "build": "tailwindcss -i ./public/css/tailwind/input.css -o ./public/css/tailwind/output.css",
     "export": "node tools/export-static.js",
     "predeploy": "npm run build && npm run export",
