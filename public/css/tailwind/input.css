@@ -97,16 +97,4 @@ a:hover {
   color: white;
 }
 
-@media (max-width: 1080px) {
-  .md\:w-1\/2 {
-    margin: 1rem 0;
-  }
 
-  .flex-grow {
-    margin-bottom: 1rem;
-  }
-
-  .flex.justify-center.h-24 {
-    margin: 1rem 0;
-  }
-}
